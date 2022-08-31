@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 
 namespace Natuurpark1._2
-{
+{//start of something new 
     public partial class Guest : Form
     {
         public Guest()
