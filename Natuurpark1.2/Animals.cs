@@ -35,7 +35,7 @@ namespace Natuurpark1._2
             SqlCommand com;
             adap = new SqlDataAdapter();
             data = new DataSet();
-            string sql = "Select * from House";
+            string sql = "Select * from Animals";
             com = new SqlCommand(sql, conn);
             adap.SelectCommand = com;
             adap.Fill(data, "Lys");
@@ -48,7 +48,7 @@ namespace Natuurpark1._2
         {
             conn = new SqlConnection(constr);
             conn.Open();
-            String query = "insert into Animals (Animals_Type) VALUES (@House_type)";
+            String query = "insert into Animals (Animal_Type) VALUES (@House_type)";
             SqlCommand cmd = new SqlCommand(query, conn);
             cmd.Parameters.AddWithValue("@House_type", numericUpDown2.Value);
             cmd.ExecuteNonQuery();

@@ -51,5 +51,14 @@ namespace Natuurpark1._2
             cmd.ExecuteNonQuery();
             conn.Close();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Hide();
+            House_Type form2 = new House_Type();
+            form2.ShowDialog();
+            form2 = null;
+            Show();
+        }
     }
 }

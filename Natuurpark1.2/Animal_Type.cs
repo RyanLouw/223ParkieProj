@@ -39,7 +39,7 @@ namespace Natuurpark1._2
                 v = "T";
             else
                 v = "F";
-
+            //add of a an type
            conn = new SqlConnection(constr);
              conn.Open();
              String query = "insert into Animal_Type (AType_Name,AType_Endangered) VALUES (@Name,@Endangered)";
@@ -48,6 +48,7 @@ namespace Natuurpark1._2
              cmd.Parameters.AddWithValue("@Endangered", v);
              cmd.ExecuteNonQuery();
              conn.Close();
+            
         }
 
         private void Animal_Type_Load(object sender, EventArgs e)

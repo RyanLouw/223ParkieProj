@@ -23,15 +23,16 @@ namespace Natuurpark1._2
 
             //this.Close();
 
-            if(UsernameTB.Text=="" && wagwoordTB.Text =="")
+            if(UsernameTB.Text=="1" && wagwoordTB.Text =="1")
             {
                 //maak boolian true
+                Hide();
+                Nave form2 = new Nave();
+                form2.ShowDialog();
+                form2 = null;
+                Show();
             }
-            Hide();
-            Nave form2 = new Nave();
-            form2.ShowDialog();
-            form2 = null;
-            Show();
+            
         }
     }
 }
