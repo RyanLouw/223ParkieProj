@@ -23,7 +23,7 @@ namespace Natuurpark1._2
 
             //this.Close();
 
-            if(UsernameTB.Text=="1" && wagwoordTB.Text =="1")
+            if(UsernameTB.Text=="" && wagwoordTB.Text =="")
             {
                 //maak boolian true
                 Hide();
