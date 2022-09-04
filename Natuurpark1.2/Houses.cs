@@ -60,5 +60,38 @@ namespace Natuurpark1._2
             form2 = null;
             Show();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(constr))
+                {
+                    conn.Open();
+                    using (SqlCommand command = new SqlCommand("DELETE FROM House  WHERE House_num = " + lbID.Text + " ", conn))
+                    {
+                        command.ExecuteNonQuery();
+                    }
+                    conn.Close();
+                }
+                conn = new SqlConnection(constr);
+                conn.Open();
+
+                SqlCommand com;
+                adap = new SqlDataAdapter();
+                data = new DataSet();
+
+                string sql = "Select * from House ";
+                com = new SqlCommand(sql, conn);
+                adap.SelectCommand = com;
+                adap.Fill(data, "Lys");
+                dataGridView1.DataSource = data;
+                dataGridView1.DataMember = "Lys"; conn.Close();
+            }
+            catch (SystemException ex)
+            {
+                MessageBox.Show(string.Format("An error occurred: {0}", ex.Message));
+            }
+        }
     }
 }

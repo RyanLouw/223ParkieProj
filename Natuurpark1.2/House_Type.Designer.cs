@@ -39,6 +39,7 @@ namespace Natuurpark1._2
             this.label2 = new System.Windows.Forms.Label();
             this.typezizeupdown = new System.Windows.Forms.NumericUpDown();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lbID = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.typezizeupdown)).BeginInit();
             this.SuspendLayout();
@@ -51,6 +52,7 @@ namespace Natuurpark1._2
             this.button3.TabIndex = 32;
             this.button3.Text = "del";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -130,11 +132,21 @@ namespace Natuurpark1._2
             this.textBox1.TabIndex = 36;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
+            // lbID
+            // 
+            this.lbID.AutoSize = true;
+            this.lbID.Location = new System.Drawing.Point(324, 21);
+            this.lbID.Name = "lbID";
+            this.lbID.Size = new System.Drawing.Size(0, 13);
+            this.lbID.TabIndex = 37;
+            this.lbID.Visible = false;
+            // 
             // House_Type
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lbID);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.typezizeupdown);
             this.Controls.Add(this.label2);
@@ -167,5 +179,6 @@ namespace Natuurpark1._2
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.NumericUpDown typezizeupdown;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label lbID;
     }
 }

@@ -63,6 +63,8 @@ namespace Natuurpark1._2
         //ryan 04/09/2022 Kyk of die push
         //2
         //3
+       
+
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -75,6 +77,41 @@ namespace Natuurpark1._2
             cmd.Parameters.AddWithValue("@Size", int.Parse(typezizeupdown.Value.ToString()));
             cmd.ExecuteNonQuery();
             conn.Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+            //del type.
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(constr))
+                {
+                    conn.Open();
+                    using (SqlCommand command = new SqlCommand("DELETE FROM House_Type  WHERE TypeID = " + lbID.Text + " ", conn))
+                    {
+                        command.ExecuteNonQuery();
+                    }
+                    conn.Close();
+                }
+                conn = new SqlConnection(constr);
+                conn.Open();
+
+                SqlCommand com;
+                adap = new SqlDataAdapter();
+                data = new DataSet();
+
+                string sql = "Select * from House_Type ";
+                com = new SqlCommand(sql, conn);
+                adap.SelectCommand = com;
+                adap.Fill(data, "Lys");
+                dataGridView1.DataSource = data;
+                dataGridView1.DataMember = "Lys"; conn.Close();
+            }
+            catch (SystemException ex)
+            {
+                MessageBox.Show(string.Format("An error occurred: {0}", ex.Message));
+            }
         }
     }
 }

@@ -40,6 +40,7 @@ namespace Natuurpark1._2
             this.label3 = new System.Windows.Forms.Label();
             this.NameTXT = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.lbID = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,6 +61,7 @@ namespace Natuurpark1._2
             this.button3.TabIndex = 21;
             this.button3.Text = "del";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
             // button2
             // 
@@ -83,7 +85,7 @@ namespace Natuurpark1._2
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(287, 54);
+            this.dataGridView1.Location = new System.Drawing.Point(287, 82);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(472, 327);
             this.dataGridView1.TabIndex = 18;
@@ -137,11 +139,21 @@ namespace Natuurpark1._2
             this.label2.TabIndex = 12;
             this.label2.Text = "Name";
             // 
+            // lbID
+            // 
+            this.lbID.AutoSize = true;
+            this.lbID.Location = new System.Drawing.Point(284, 41);
+            this.lbID.Name = "lbID";
+            this.lbID.Size = new System.Drawing.Size(0, 13);
+            this.lbID.TabIndex = 38;
+            this.lbID.Visible = false;
+            // 
             // Guest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lbID);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -175,5 +187,6 @@ namespace Natuurpark1._2
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox NameTXT;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbID;
     }
 }
