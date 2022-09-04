@@ -60,6 +60,7 @@ namespace Natuurpark1._2
                 e.Handled = true;
             }
         }
+        //ryan 04/09/2022 Kyk of die push
 
         private void button1_Click(object sender, EventArgs e)
         {
