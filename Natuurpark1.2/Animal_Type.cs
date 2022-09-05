@@ -99,5 +99,35 @@ namespace Natuurpark1._2
                 MessageBox.Show(string.Format("An error occurred: {0}", ex.Message));
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string v = "";
+
+            if (radioButton1.Checked == true)
+                v = "T";
+            else
+                v = "F";
+
+            conn = new SqlConnection(constr);
+            conn.Open();
+            string qu = "";
+            qu = " UPDATE Animal_Type SET Animal_Type = '" + AnimalTypeName.Text + "' WHERE Animal_TypeID = '" + lbID.Text + "'";
+            SqlCommand cmd = new SqlCommand(qu, conn);
+            cmd.ExecuteNonQuery();
+
+            qu = " UPDATE Animal_Type SET AType_Endangered = '" + v + "' WHERE Animal_TypeID = '" + lbID.Text + "'";
+            SqlCommand cmd1 = new SqlCommand(qu, conn);
+            cmd1.ExecuteNonQuery();
+
+           
+            conn.Close();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int row = e.RowIndex;
+            AnimalTypeName.Text = Convert.ToString();
+        }
     }
 }

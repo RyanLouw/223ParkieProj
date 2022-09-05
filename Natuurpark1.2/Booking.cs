@@ -39,5 +39,10 @@ namespace Natuurpark1._2
             dataGridView1.DataMember = "Lys";
             conn.Close();
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
