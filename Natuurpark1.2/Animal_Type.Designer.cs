@@ -41,18 +41,21 @@ namespace Natuurpark1._2
             // 
             // AnimalTypeName
             // 
-            this.AnimalTypeName.Location = new System.Drawing.Point(154, 12);
+            this.AnimalTypeName.Location = new System.Drawing.Point(205, 15);
+            this.AnimalTypeName.Margin = new System.Windows.Forms.Padding(4);
             this.AnimalTypeName.Name = "AnimalTypeName";
-            this.AnimalTypeName.Size = new System.Drawing.Size(100, 20);
+            this.AnimalTypeName.Size = new System.Drawing.Size(132, 22);
             this.AnimalTypeName.TabIndex = 17;
+            this.AnimalTypeName.TextChanged += new System.EventHandler(this.AnimalTypeName_TextChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(12, 15);
+            this.label3.Location = new System.Drawing.Point(16, 18);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(116, 13);
+            this.label3.Size = new System.Drawing.Size(148, 17);
             this.label3.TabIndex = 16;
             this.label3.Text = "Animal Type Name:";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -61,28 +64,33 @@ namespace Natuurpark1._2
             // 
             this.radioButton1.AutoSize = true;
             this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.Location = new System.Drawing.Point(15, 66);
+            this.radioButton1.Location = new System.Drawing.Point(20, 81);
+            this.radioButton1.Margin = new System.Windows.Forms.Padding(4);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(93, 17);
+            this.radioButton1.Size = new System.Drawing.Size(117, 21);
             this.radioButton1.TabIndex = 18;
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Endangered";
             this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(297, 12);
+            this.dataGridView1.Location = new System.Drawing.Point(396, 15);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(419, 344);
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.Size = new System.Drawing.Size(559, 423);
             this.dataGridView1.TabIndex = 19;
             // 
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(93, 171);
+            this.button3.Location = new System.Drawing.Point(124, 210);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.Size = new System.Drawing.Size(100, 28);
             this.button3.TabIndex = 25;
             this.button3.Text = "Delete";
             this.button3.UseVisualStyleBackColor = true;
@@ -90,9 +98,10 @@ namespace Natuurpark1._2
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(154, 126);
+            this.button2.Location = new System.Drawing.Point(205, 155);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(100, 28);
             this.button2.TabIndex = 24;
             this.button2.Text = "Edit";
             this.button2.UseVisualStyleBackColor = true;
@@ -100,9 +109,10 @@ namespace Natuurpark1._2
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(33, 126);
+            this.button1.Location = new System.Drawing.Point(44, 155);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(100, 28);
             this.button1.TabIndex = 23;
             this.button1.Text = "Add";
             this.button1.UseVisualStyleBackColor = true;
@@ -110,10 +120,10 @@ namespace Natuurpark1._2
             // 
             // Animal_Type
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGray;
-            this.ClientSize = new System.Drawing.Size(728, 369);
+            this.ClientSize = new System.Drawing.Size(971, 454);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -121,6 +131,7 @@ namespace Natuurpark1._2
             this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.AnimalTypeName);
             this.Controls.Add(this.label3);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Animal_Type";
             this.Text = "Animal_Type";
             this.Load += new System.EventHandler(this.Animal_Type_Load);

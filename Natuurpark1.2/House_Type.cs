@@ -51,6 +51,17 @@ namespace Natuurpark1._2
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
+            conn = new SqlConnection(constr);
+            conn.Open();
+            adap = new SqlDataAdapter();
+            data = new DataSet();
+            string sql = $"SELECT * FROM House_Type WHERE Type_Price LIKE '%" + TypePriceTxt.Text + "%'";
+            comm = new SqlCommand(sql, conn);
+            adap.SelectCommand = comm;
+            adap.Fill(data, "House_Type");
+            dataGridView1.DataSource = data;
+            dataGridView1.DataMember = "House_Type";
+            conn.Close();
 
         }
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
@@ -72,7 +83,7 @@ namespace Natuurpark1._2
             conn.Open();
             String query = "insert into House_Type (Type_Price,Type_Name,Type_Size) VALUES (@Price,@Name,@Size)";
             SqlCommand cmd = new SqlCommand(query, conn);
-            cmd.Parameters.AddWithValue("@Price", float.Parse(textBox1.Text));
+            cmd.Parameters.AddWithValue("@Price", float.Parse(TypePriceTxt.Text));
             cmd.Parameters.AddWithValue("@Name", TypeNAmeTxt.Text);
             cmd.Parameters.AddWithValue("@Size", int.Parse(typezizeupdown.Value.ToString()));
             cmd.ExecuteNonQuery();
@@ -112,6 +123,22 @@ namespace Natuurpark1._2
             {
                 MessageBox.Show(string.Format("An error occurred: {0}", ex.Message));
             }
+        }
+
+        private void TypeNAmeTxt_TextChanged(object sender, EventArgs e)
+        {
+            conn = new SqlConnection(constr);
+            conn.Open();
+            adap = new SqlDataAdapter();
+            data = new DataSet();
+            string sql = $"SELECT * FROM House_Type WHERE Type_Name LIKE '%" + TypeNAmeTxt.Text + "%'";
+            comm = new SqlCommand(sql, conn);
+            adap.SelectCommand = comm;
+            adap.Fill(data, "House_Type");
+            dataGridView1.DataSource = data;
+            dataGridView1.DataMember = "House_Type";
+            conn.Close();
+
         }
     }
 }

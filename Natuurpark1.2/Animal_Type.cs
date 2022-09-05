@@ -66,5 +66,38 @@ namespace Natuurpark1._2
             dataGridView1.DataMember = "Lys";
             conn.Close();
         }
+
+        private void AnimalTypeName_TextChanged(object sender, EventArgs e)
+        {
+            conn = new SqlConnection(constr);
+            conn.Open();
+            adap = new SqlDataAdapter();
+            data = new DataSet();
+            string sql = $"SELECT * FROM Animal_Type WHERE AType_Name LIKE '%" + AnimalTypeName.Text + "%'";
+            comm = new SqlCommand(sql, conn);
+            adap.SelectCommand = comm;
+            adap.Fill(data, "Animal_Type");
+            dataGridView1.DataSource = data;
+            dataGridView1.DataMember = "Animal_Type";
+            conn.Close();
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButton1.Checked == true)
+            {
+                conn = new SqlConnection(constr);
+                conn.Open();
+                adap = new SqlDataAdapter();
+                data = new DataSet();
+                string sql = $"SELECT * FROM Animal_Type WHERE AType_Endangered LIKE '%Endangered%'";
+                comm = new SqlCommand(sql, conn);
+                adap.SelectCommand = comm;
+                adap.Fill(data, "Animal_Type");
+                dataGridView1.DataSource = data;
+                dataGridView1.DataMember = "Animal_Type";
+                conn.Close();
+            }
+        }
     }
 }

@@ -38,7 +38,7 @@ namespace Natuurpark1._2
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.typezizeupdown = new System.Windows.Forms.NumericUpDown();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TypePriceTxt = new System.Windows.Forms.TextBox();
             this.lbID = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.typezizeupdown)).BeginInit();
@@ -46,9 +46,10 @@ namespace Natuurpark1._2
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(38, 333);
+            this.button3.Location = new System.Drawing.Point(51, 410);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.Size = new System.Drawing.Size(100, 28);
             this.button3.TabIndex = 32;
             this.button3.Text = "del";
             this.button3.UseVisualStyleBackColor = true;
@@ -56,18 +57,20 @@ namespace Natuurpark1._2
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(119, 294);
+            this.button2.Location = new System.Drawing.Point(159, 362);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(100, 28);
             this.button2.TabIndex = 31;
             this.button2.Text = "Edit";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(38, 294);
+            this.button1.Location = new System.Drawing.Point(51, 362);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(100, 28);
             this.button1.TabIndex = 30;
             this.button1.Text = "Add";
             this.button1.UseVisualStyleBackColor = true;
@@ -76,24 +79,29 @@ namespace Natuurpark1._2
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(327, 79);
+            this.dataGridView1.Location = new System.Drawing.Point(436, 97);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(344, 292);
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.Size = new System.Drawing.Size(459, 359);
             this.dataGridView1.TabIndex = 29;
             // 
             // TypeNAmeTxt
             // 
-            this.TypeNAmeTxt.Location = new System.Drawing.Point(38, 127);
+            this.TypeNAmeTxt.Location = new System.Drawing.Point(51, 156);
+            this.TypeNAmeTxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TypeNAmeTxt.Name = "TypeNAmeTxt";
-            this.TypeNAmeTxt.Size = new System.Drawing.Size(100, 20);
+            this.TypeNAmeTxt.Size = new System.Drawing.Size(132, 22);
             this.TypeNAmeTxt.TabIndex = 27;
+            this.TypeNAmeTxt.TextChanged += new System.EventHandler(this.TypeNAmeTxt_TextChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(35, 99);
+            this.label3.Location = new System.Drawing.Point(47, 122);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 13);
+            this.label3.Size = new System.Drawing.Size(79, 17);
             this.label3.TabIndex = 26;
             this.label3.Text = "Type name";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -101,53 +109,58 @@ namespace Natuurpark1._2
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(38, 181);
+            this.label1.Location = new System.Drawing.Point(51, 223);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 13);
+            this.label1.Size = new System.Drawing.Size(75, 17);
             this.label1.TabIndex = 33;
             this.label1.Text = "Type price";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(40, 234);
+            this.label2.Location = new System.Drawing.Point(53, 288);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 13);
+            this.label2.Size = new System.Drawing.Size(69, 17);
             this.label2.TabIndex = 34;
             this.label2.Text = "Type size";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // typezizeupdown
             // 
-            this.typezizeupdown.Location = new System.Drawing.Point(38, 250);
+            this.typezizeupdown.Location = new System.Drawing.Point(51, 308);
+            this.typezizeupdown.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.typezizeupdown.Name = "typezizeupdown";
-            this.typezizeupdown.Size = new System.Drawing.Size(120, 20);
+            this.typezizeupdown.Size = new System.Drawing.Size(160, 22);
             this.typezizeupdown.TabIndex = 35;
             // 
-            // textBox1
+            // TypePriceTxt
             // 
-            this.textBox1.Location = new System.Drawing.Point(38, 197);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 36;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.TypePriceTxt.Location = new System.Drawing.Point(51, 242);
+            this.TypePriceTxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TypePriceTxt.Name = "TypePriceTxt";
+            this.TypePriceTxt.Size = new System.Drawing.Size(132, 22);
+            this.TypePriceTxt.TabIndex = 36;
+            this.TypePriceTxt.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // lbID
             // 
             this.lbID.AutoSize = true;
-            this.lbID.Location = new System.Drawing.Point(324, 21);
+            this.lbID.Location = new System.Drawing.Point(432, 26);
+            this.lbID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbID.Name = "lbID";
-            this.lbID.Size = new System.Drawing.Size(0, 13);
+            this.lbID.Size = new System.Drawing.Size(0, 17);
             this.lbID.TabIndex = 37;
             this.lbID.Visible = false;
             // 
             // House_Type
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.lbID);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.TypePriceTxt);
             this.Controls.Add(this.typezizeupdown);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -157,6 +170,7 @@ namespace Natuurpark1._2
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.TypeNAmeTxt);
             this.Controls.Add(this.label3);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "House_Type";
             this.Text = "House_Type";
             this.Load += new System.EventHandler(this.House_Type_Load);
@@ -178,7 +192,7 @@ namespace Natuurpark1._2
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.NumericUpDown typezizeupdown;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TypePriceTxt;
         private System.Windows.Forms.Label lbID;
     }
 }
