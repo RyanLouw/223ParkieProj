@@ -93,5 +93,15 @@ namespace Natuurpark1._2
                 MessageBox.Show(string.Format("An error occurred: {0}", ex.Message));
             }
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

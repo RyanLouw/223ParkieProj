@@ -52,6 +52,7 @@ namespace Natuurpark1._2
             this.button3.TabIndex = 25;
             this.button3.Text = "Edit";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -80,6 +81,7 @@ namespace Natuurpark1._2
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(418, 150);
             this.dataGridView1.TabIndex = 22;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // numericUpDown2
             // 

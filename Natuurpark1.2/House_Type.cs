@@ -72,7 +72,7 @@ namespace Natuurpark1._2
             conn.Open();
             String query = "insert into House_Type (Type_Price,Type_Name,Type_Size) VALUES (@Price,@Name,@Size)";
             SqlCommand cmd = new SqlCommand(query, conn);
-            cmd.Parameters.AddWithValue("@Price", float.Parse(textBox1.Text));
+            cmd.Parameters.AddWithValue("@Price", float.Parse(typepricetxt.Text));
             cmd.Parameters.AddWithValue("@Name", TypeNAmeTxt.Text);
             cmd.Parameters.AddWithValue("@Size", int.Parse(typezizeupdown.Value.ToString()));
             cmd.ExecuteNonQuery();
@@ -112,6 +112,48 @@ namespace Natuurpark1._2
             {
                 MessageBox.Show(string.Format("An error occurred: {0}", ex.Message));
             }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int row = e.RowIndex;
+            lbID.Text = Convert.ToString(dataGridView1[0, row].Value);
+            typepricetxt.Text = Convert.ToString(dataGridView1[1, row].Value);
+            TypeNAmeTxt.Text = Convert.ToString(dataGridView1[2, row].Value);
+            
+        }
+
+        private void TypeNAmeTxt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void typepricetxt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            conn = new SqlConnection(constr);
+            conn.Open();
+            string qu = "";
+            //Price is n float onthou om die try orasl in te sit na als 100 wqerk
+
+            qu = " UPDATE House_Type SET Type_Price = '" + float.Parse(typepricetxt.Text) + "' WHERE TypeID = '" + lbID.Text + "'";
+            SqlCommand cmd = new SqlCommand(qu, conn);
+            cmd.ExecuteNonQuery();
+
+
+            qu = " UPDATE House_Type SET Type_Name = '" + TypeNAmeTxt.Text + "' WHERE TypeID = '" + lbID.Text + "'";
+            SqlCommand cmd1 = new SqlCommand(qu, conn);
+            cmd.ExecuteNonQuery();
+
+            qu = " UPDATE House_Type SET Type_Size = '" + typezizeupdown.Value + "' WHERE TypeID = '" + lbID.Text + "'";
+            SqlCommand cmd2 = new SqlCommand(qu, conn);
+            cmd.ExecuteNonQuery();
+
+            conn.Close();
         }
     }
 }

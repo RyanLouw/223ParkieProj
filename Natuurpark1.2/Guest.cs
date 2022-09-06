@@ -27,6 +27,11 @@ namespace Natuurpark1._2
         string constr = @"Data Source=RYAN-PC;Initial Catalog=Park;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            int row = e.RowIndex;
+            lbID.Text = Convert.ToString(dataGridView1[0, row].Value);
+            NameTXT.Text = Convert.ToString(dataGridView1[1, row].Value);
+            VanTXT.Text = Convert.ToString(dataGridView1[1, row].Value);
+            Emailtxt.Text = Convert.ToString(dataGridView1[1, row].Value);
 
         }
 
@@ -98,6 +103,32 @@ namespace Natuurpark1._2
             {
                 MessageBox.Show(string.Format("An error occurred: {0}", ex.Message));
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            conn = new SqlConnection(constr);
+            conn.Open();
+            string qu = "";
+            qu = " UPDATE Guests SET Guests_Name = '" + NameTXT.Text + "' WHERE Guest_ID = '" + lbID.Text + "'";
+            SqlCommand cmd = new SqlCommand(qu, conn);
+            cmd.ExecuteNonQuery();
+
+
+            qu = " UPDATE Guests SET Guests_Surname = '" + VanTXT.Text + "' WHERE Guest_ID = '" + lbID.Text + "'";
+            SqlCommand cmd1 = new SqlCommand(qu, conn);
+            cmd.ExecuteNonQuery();
+
+            qu = " UPDATE Guests SET Guests_Email = '" + Emailtxt.Text + "' WHERE Guest_ID = '" + lbID.Text + "'";
+            SqlCommand cmd2 = new SqlCommand(qu, conn);
+            cmd.ExecuteNonQuery();
+
+            conn.Close();
+        }
+
+        private void NameTXT_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

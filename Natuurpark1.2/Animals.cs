@@ -71,7 +71,7 @@ namespace Natuurpark1._2
                 using (SqlConnection conn = new SqlConnection(constr))
                 {
                     conn.Open();
-                    using (SqlCommand command = new SqlCommand("DELETE FROM Animals  WHERE Animal_ID = " + lbID.Text + " ", conn))
+                    using (SqlCommand command = new SqlCommand("DELETE FROM Animals  WHERE Animal_ID = " + numericUpDown1.Value + " ", conn))
                     {
                         command.ExecuteNonQuery();
                     }
@@ -95,6 +95,23 @@ namespace Natuurpark1._2
             {
                 MessageBox.Show(string.Format("An error occurred: {0}", ex.Message));
             }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            conn = new SqlConnection(constr);
+            conn.Open();
+            string qu = "";
+            qu = " UPDATE Animals SET Animal_Type = '" + numericUpDown2.Value + "' WHERE Animal_ID = '" + numericUpDown1.Value + "'";
+            SqlCommand cmd = new SqlCommand(qu, conn);
+            cmd.ExecuteNonQuery();
+
+            conn.Close();
         }
     }
 }
