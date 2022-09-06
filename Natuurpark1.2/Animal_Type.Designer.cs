@@ -73,7 +73,7 @@ namespace Natuurpark1._2
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(297, 12);
+            this.dataGridView1.Location = new System.Drawing.Point(287, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(419, 344);
             this.dataGridView1.TabIndex = 19;
@@ -115,11 +115,10 @@ namespace Natuurpark1._2
             // lbID
             // 
             this.lbID.AutoSize = true;
-            this.lbID.Location = new System.Drawing.Point(364, 178);
+            this.lbID.Location = new System.Drawing.Point(67, 255);
             this.lbID.Name = "lbID";
             this.lbID.Size = new System.Drawing.Size(0, 13);
             this.lbID.TabIndex = 38;
-            this.lbID.Visible = false;
             // 
             // Animal_Type
             // 

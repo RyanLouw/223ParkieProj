@@ -127,7 +127,16 @@ namespace Natuurpark1._2
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             int row = e.RowIndex;
-            AnimalTypeName.Text = Convert.ToString();
+            AnimalTypeName.Text = Convert.ToString(dataGridView1[1,row].Value);
+            lbID.Text = Convert.ToString(dataGridView1[0, row].Value);
+            if (Convert.ToString(dataGridView1[2, row].Value) == "T")
+            {
+                radioButton1.Checked = true;
+            }
+            else
+                radioButton1.Checked = false;
+
+            MessageBox.Show(lbID.Text);
         }
     }
 }
