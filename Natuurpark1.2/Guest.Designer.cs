@@ -52,6 +52,7 @@ namespace Natuurpark1._2
             this.button4.TabIndex = 22;
             this.button4.Text = "Find Email";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 

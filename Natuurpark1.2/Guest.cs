@@ -30,8 +30,8 @@ namespace Natuurpark1._2
             int row = e.RowIndex;
             lbID.Text = Convert.ToString(dataGridView1[0, row].Value);
             NameTXT.Text = Convert.ToString(dataGridView1[1, row].Value);
-            VanTXT.Text = Convert.ToString(dataGridView1[1, row].Value);
-            Emailtxt.Text = Convert.ToString(dataGridView1[1, row].Value);
+            VanTXT.Text = Convert.ToString(dataGridView1[2, row].Value);
+            Emailtxt.Text = Convert.ToString(dataGridView1[3, row].Value);
 
         }
 
@@ -110,16 +110,16 @@ namespace Natuurpark1._2
             conn = new SqlConnection(constr);
             conn.Open();
             string qu = "";
-            qu = " UPDATE Guests SET Guests_Name = '" + NameTXT.Text + "' WHERE Guest_ID = '" + lbID.Text + "'";
+            qu = " UPDATE Guests SET Guest_Name = '" + NameTXT.Text + "' WHERE Guest_ID = '" + lbID.Text + "'";
             SqlCommand cmd = new SqlCommand(qu, conn);
             cmd.ExecuteNonQuery();
 
 
-            qu = " UPDATE Guests SET Guests_Surname = '" + VanTXT.Text + "' WHERE Guest_ID = '" + lbID.Text + "'";
+            qu = " UPDATE Guests SET Guest_Surname = '" + VanTXT.Text + "' WHERE Guest_ID = '" + lbID.Text + "'";
             SqlCommand cmd1 = new SqlCommand(qu, conn);
             cmd.ExecuteNonQuery();
 
-            qu = " UPDATE Guests SET Guests_Email = '" + Emailtxt.Text + "' WHERE Guest_ID = '" + lbID.Text + "'";
+            qu = " UPDATE Guests SET Guest_Email = '" + Emailtxt.Text + "' WHERE Guest_ID = '" + lbID.Text + "'";
             SqlCommand cmd2 = new SqlCommand(qu, conn);
             cmd.ExecuteNonQuery();
 
@@ -130,5 +130,23 @@ namespace Natuurpark1._2
         {
 
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            conn = new SqlConnection(constr);
+            conn.Open();
+            SqlCommand com;
+            adap = new SqlDataAdapter();
+            data = new DataSet();
+            string sql = "Select * from Guests WHERE Guest_Email = '"+ Emailtxt.Text + "'";
+            com = new SqlCommand(sql, conn);
+            adap.SelectCommand = com;
+            adap.Fill(data, "Lys");
+            dataGridView1.DataSource = data;
+            dataGridView1.DataMember = "Lys";
+            conn.Close();
+            //MessageBox.Show((dataGridView1.Rows.Count-1).ToString());
+        }
     }
+    
 }

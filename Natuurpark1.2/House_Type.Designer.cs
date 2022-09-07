@@ -123,7 +123,7 @@ namespace Natuurpark1._2
             // lbID
             // 
             this.lbID.AutoSize = true;
-            this.lbID.Location = new System.Drawing.Point(324, 21);
+            this.lbID.Location = new System.Drawing.Point(40, 26);
             this.lbID.Name = "lbID";
             this.lbID.Size = new System.Drawing.Size(0, 13);
             this.lbID.TabIndex = 37;

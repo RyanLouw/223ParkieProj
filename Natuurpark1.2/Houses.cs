@@ -96,10 +96,42 @@ namespace Natuurpark1._2
 
         private void button3_Click(object sender, EventArgs e)
         {
+            conn = new SqlConnection(constr);
+            conn.Open();
+            string qu = "";
+            qu = " UPDATE House SET House_typeID = '" + numericUpDown2.Value + "' WHERE House_num = '" + lbID.Text + "'";
+            SqlCommand cmd = new SqlCommand(qu, conn);
+            cmd.ExecuteNonQuery();
 
+            conn.Close();
         }
 
         private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+           
+            
+        }
+
+        private void dataGridView1_DoubleClick(object sender, EventArgs e)
+        {
+           
+           
+            
+        }
+
+        private void dataGridView1_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            lbID.Text = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
+            MessageBox.Show(lbID.Text);
+            numericUpDown1.Value = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[0].Value.ToString());
+        }
+
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {
 
         }

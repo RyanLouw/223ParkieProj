@@ -73,6 +73,7 @@ namespace Natuurpark1._2
             this.button2.TabIndex = 31;
             this.button2.Text = "Edit";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -82,6 +83,7 @@ namespace Natuurpark1._2
             this.button1.TabIndex = 30;
             this.button1.Text = "Add";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // dataGridView1
             // 
@@ -90,6 +92,8 @@ namespace Natuurpark1._2
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(472, 327);
             this.dataGridView1.TabIndex = 29;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dataGridView1_MouseDoubleClick);
             // 
             // textBox3
             // 
@@ -113,6 +117,7 @@ namespace Natuurpark1._2
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 20);
             this.textBox2.TabIndex = 26;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label3
             // 
@@ -151,9 +156,11 @@ namespace Natuurpark1._2
             // dateTimePicker1
             // 
             this.dateTimePicker1.Location = new System.Drawing.Point(42, 217);
+            this.dateTimePicker1.MinDate = new System.DateTime(2022, 9, 7, 10, 58, 12, 0);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 35;
+            this.dateTimePicker1.Value = new System.DateTime(2022, 9, 7, 10, 58, 12, 0);
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // lbID

@@ -92,6 +92,9 @@ namespace Natuurpark1._2
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(418, 150);
             this.dataGridView1.TabIndex = 13;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseDoubleClick);
+            this.dataGridView1.DoubleClick += new System.EventHandler(this.dataGridView1_DoubleClick);
             // 
             // numericUpDown2
             // 
@@ -115,6 +118,7 @@ namespace Natuurpark1._2
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
             this.numericUpDown1.TabIndex = 10;
+            this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 
             // label1
             // 
@@ -138,11 +142,10 @@ namespace Natuurpark1._2
             // lbID
             // 
             this.lbID.AutoSize = true;
-            this.lbID.Location = new System.Drawing.Point(303, 53);
+            this.lbID.Location = new System.Drawing.Point(101, 150);
             this.lbID.Name = "lbID";
             this.lbID.Size = new System.Drawing.Size(0, 13);
             this.lbID.TabIndex = 38;
-            this.lbID.Visible = false;
             // 
             // Houses
             // 
