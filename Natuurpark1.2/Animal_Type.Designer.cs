@@ -69,6 +69,7 @@ namespace Natuurpark1._2
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Endangered";
             this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // dataGridView1
             // 
@@ -124,7 +125,6 @@ namespace Natuurpark1._2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkGray;
             this.ClientSize = new System.Drawing.Size(728, 369);
             this.Controls.Add(this.lbID);
             this.Controls.Add(this.button3);

@@ -138,5 +138,10 @@ namespace Natuurpark1._2
 
             MessageBox.Show(lbID.Text);
         }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

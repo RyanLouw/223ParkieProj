@@ -113,5 +113,10 @@ namespace Natuurpark1._2
 
             conn.Close();
         }
+
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

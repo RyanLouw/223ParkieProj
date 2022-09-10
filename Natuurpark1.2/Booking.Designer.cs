@@ -29,9 +29,6 @@ namespace Natuurpark1._2
         /// </summary>
         private void InitializeComponent()
         {
-            this.check = new System.Windows.Forms.Button();
-            this.Guest = new System.Windows.Forms.Button();
-            this.back = new System.Windows.Forms.Button();
             this.dell = new System.Windows.Forms.Button();
             this.edit = new System.Windows.Forms.Button();
             this.Add = new System.Windows.Forms.Button();
@@ -56,58 +53,35 @@ namespace Natuurpark1._2
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
             this.SuspendLayout();
             // 
-            // check
-            // 
-            this.check.Location = new System.Drawing.Point(262, 159);
-            this.check.Name = "check";
-            this.check.Size = new System.Drawing.Size(75, 44);
-            this.check.TabIndex = 34;
-            this.check.Text = "check for booking";
-            this.check.UseVisualStyleBackColor = true;
-            // 
-            // Guest
-            // 
-            this.Guest.Location = new System.Drawing.Point(262, 209);
-            this.Guest.Name = "Guest";
-            this.Guest.Size = new System.Drawing.Size(75, 38);
-            this.Guest.TabIndex = 33;
-            this.Guest.Text = "Go To Geust";
-            this.Guest.UseVisualStyleBackColor = true;
-            // 
-            // back
-            // 
-            this.back.Location = new System.Drawing.Point(365, 415);
-            this.back.Name = "back";
-            this.back.Size = new System.Drawing.Size(75, 23);
-            this.back.TabIndex = 32;
-            this.back.Text = "button4";
-            this.back.UseVisualStyleBackColor = true;
-            // 
             // dell
             // 
-            this.dell.Location = new System.Drawing.Point(262, 130);
+            this.dell.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dell.Location = new System.Drawing.Point(834, 408);
             this.dell.Name = "dell";
-            this.dell.Size = new System.Drawing.Size(75, 23);
+            this.dell.Size = new System.Drawing.Size(100, 23);
             this.dell.TabIndex = 31;
-            this.dell.Text = "del";
+            this.dell.Text = "Delete";
+            this.dell.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.dell.UseVisualStyleBackColor = true;
             this.dell.Click += new System.EventHandler(this.dell_Click);
             // 
             // edit
             // 
-            this.edit.Location = new System.Drawing.Point(262, 101);
+            this.edit.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.edit.Location = new System.Drawing.Point(638, 408);
             this.edit.Name = "edit";
-            this.edit.Size = new System.Drawing.Size(75, 23);
+            this.edit.Size = new System.Drawing.Size(100, 23);
             this.edit.TabIndex = 30;
-            this.edit.Text = "edit";
+            this.edit.Text = "Edit";
             this.edit.UseVisualStyleBackColor = true;
             this.edit.Click += new System.EventHandler(this.del_Click);
             // 
             // Add
             // 
-            this.Add.Location = new System.Drawing.Point(262, 64);
+            this.Add.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Add.Location = new System.Drawing.Point(423, 408);
             this.Add.Name = "Add";
-            this.Add.Size = new System.Drawing.Size(75, 23);
+            this.Add.Size = new System.Drawing.Size(101, 23);
             this.Add.TabIndex = 29;
             this.Add.Text = "Add";
             this.Add.UseVisualStyleBackColor = true;
@@ -125,40 +99,50 @@ namespace Natuurpark1._2
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(25, 156);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(82, 13);
+            this.label3.Size = new System.Drawing.Size(99, 13);
             this.label3.TabIndex = 25;
-            this.label3.Text = "Worker Number";
+            this.label3.Text = "Worker Number:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(25, 101);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(75, 13);
+            this.label2.Size = new System.Drawing.Size(88, 13);
             this.label2.TabIndex = 24;
-            this.label2.Text = "Booking_Date";
+            this.label2.Text = "Booking Date:";
             // 
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
+            this.checkBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox2.ForeColor = System.Drawing.Color.White;
             this.checkBox2.Location = new System.Drawing.Point(25, 241);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(67, 17);
+            this.checkBox2.Size = new System.Drawing.Size(66, 17);
             this.checkBox2.TabIndex = 23;
-            this.checkBox2.Text = "Arivewrd";
+            this.checkBox2.Text = "Arrived";
             this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
             // 
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
+            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox1.ForeColor = System.Drawing.Color.White;
             this.checkBox1.Location = new System.Drawing.Point(25, 209);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(50, 17);
+            this.checkBox1.Size = new System.Drawing.Size(55, 17);
             this.checkBox1.TabIndex = 22;
             this.checkBox1.Text = "Paid ";
             this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // dateTimePicker1
             // 
@@ -170,11 +154,13 @@ namespace Natuurpark1._2
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(25, 42);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(82, 13);
+            this.label1.Size = new System.Drawing.Size(100, 13);
             this.label1.TabIndex = 18;
-            this.label1.Text = "Number of beds";
+            this.label1.Text = "Number of beds:";
             // 
             // numericUpDown1
             // 
@@ -230,11 +216,12 @@ namespace Natuurpark1._2
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(22, 332);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(57, 13);
+            this.label5.Size = new System.Drawing.Size(76, 13);
             this.label5.TabIndex = 37;
-            this.label5.Text = "Hous Num";
+            this.label5.Text = "House Num:";
             // 
             // numericUpDown4
             // 
@@ -256,12 +243,13 @@ namespace Natuurpark1._2
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(22, 273);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(58, 13);
             this.label6.TabIndex = 39;
-            this.label6.Text = "Guest num";
+            this.label6.Text = "Guest num:";
             // 
             // lbID
             // 
@@ -276,6 +264,7 @@ namespace Natuurpark1._2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(63)))), ((int)(((byte)(33)))));
             this.ClientSize = new System.Drawing.Size(994, 450);
             this.Controls.Add(this.lbID);
             this.Controls.Add(this.numericUpDown4);
@@ -284,9 +273,6 @@ namespace Natuurpark1._2
             this.Controls.Add(this.label5);
             this.Controls.Add(this.numericUpDown2);
             this.Controls.Add(this.numericUpDown1);
-            this.Controls.Add(this.check);
-            this.Controls.Add(this.Guest);
-            this.Controls.Add(this.back);
             this.Controls.Add(this.dell);
             this.Controls.Add(this.edit);
             this.Controls.Add(this.Add);
@@ -311,10 +297,6 @@ namespace Natuurpark1._2
         }
 
         #endregion
-
-        private System.Windows.Forms.Button check;
-        private System.Windows.Forms.Button Guest;
-        private System.Windows.Forms.Button back;
         private System.Windows.Forms.Button dell;
         private System.Windows.Forms.Button edit;
         private System.Windows.Forms.Button Add;

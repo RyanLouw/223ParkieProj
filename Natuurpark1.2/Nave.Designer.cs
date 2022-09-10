@@ -38,6 +38,7 @@ namespace Natuurpark1._2
             // 
             // BtnHouses
             // 
+            this.BtnHouses.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnHouses.Location = new System.Drawing.Point(202, 177);
             this.BtnHouses.Name = "BtnHouses";
             this.BtnHouses.Size = new System.Drawing.Size(200, 100);
@@ -48,6 +49,7 @@ namespace Natuurpark1._2
             // 
             // BtnAn
             // 
+            this.BtnAn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnAn.Location = new System.Drawing.Point(399, 177);
             this.BtnAn.Name = "BtnAn";
             this.BtnAn.Size = new System.Drawing.Size(200, 100);
@@ -58,6 +60,7 @@ namespace Natuurpark1._2
             // 
             // BtnWorkers
             // 
+            this.BtnWorkers.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnWorkers.Location = new System.Drawing.Point(305, 295);
             this.BtnWorkers.Name = "BtnWorkers";
             this.BtnWorkers.Size = new System.Drawing.Size(200, 100);
@@ -68,6 +71,7 @@ namespace Natuurpark1._2
             // 
             // BtnGueste
             // 
+            this.BtnGueste.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnGueste.Location = new System.Drawing.Point(399, 55);
             this.BtnGueste.Name = "BtnGueste";
             this.BtnGueste.Size = new System.Drawing.Size(200, 100);
@@ -78,6 +82,7 @@ namespace Natuurpark1._2
             // 
             // btnBooking
             // 
+            this.btnBooking.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBooking.Location = new System.Drawing.Point(202, 55);
             this.btnBooking.Name = "btnBooking";
             this.btnBooking.Size = new System.Drawing.Size(200, 100);
@@ -90,6 +95,7 @@ namespace Natuurpark1._2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(63)))), ((int)(((byte)(33)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.BtnHouses);
             this.Controls.Add(this.BtnAn);

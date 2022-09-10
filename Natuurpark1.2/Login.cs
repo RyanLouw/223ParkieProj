@@ -34,5 +34,15 @@ namespace Natuurpark1._2
             }
             
         }
+
+        private void usernameLB_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblName_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
