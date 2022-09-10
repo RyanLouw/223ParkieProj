@@ -46,6 +46,7 @@ namespace Natuurpark1._2
             this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
             this.label6 = new System.Windows.Forms.Label();
             this.lbID = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
@@ -178,6 +179,7 @@ namespace Natuurpark1._2
             0,
             0,
             0});
+            this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 
             // numericUpDown2
             // 
@@ -261,12 +263,24 @@ namespace Natuurpark1._2
             this.lbID.TabIndex = 41;
             this.lbID.Visible = false;
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(261, 103);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(101, 37);
+            this.button1.TabIndex = 42;
+            this.button1.Text = "Check for hooking";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Booking
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(63)))), ((int)(((byte)(33)))));
             this.ClientSize = new System.Drawing.Size(994, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.lbID);
             this.Controls.Add(this.numericUpDown4);
             this.Controls.Add(this.label6);
@@ -315,5 +329,6 @@ namespace Natuurpark1._2
         private System.Windows.Forms.NumericUpDown numericUpDown4;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lbID;
+        private System.Windows.Forms.Button button1;
     }
 }
