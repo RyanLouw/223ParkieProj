@@ -39,6 +39,7 @@ namespace Natuurpark1._2
             this.label1 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
             this.lbID = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
@@ -144,12 +145,24 @@ namespace Natuurpark1._2
             this.lbID.TabIndex = 38;
             this.lbID.Visible = false;
             // 
+            // lblName
+            // 
+            this.lblName.AutoSize = true;
+            this.lblName.Font = new System.Drawing.Font("Segoe Script", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.Location = new System.Drawing.Point(290, 9);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(210, 67);
+            this.lblName.TabIndex = 39;
+            this.lblName.Text = "Animals";
+            this.lblName.Click += new System.EventHandler(this.lblName_Click);
+            // 
             // Animals
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(63)))), ((int)(((byte)(33)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblName);
             this.Controls.Add(this.lbID);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button3);
@@ -182,5 +195,6 @@ namespace Natuurpark1._2
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Label lbID;
+        private System.Windows.Forms.Label lblName;
     }
 }

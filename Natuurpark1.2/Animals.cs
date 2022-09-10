@@ -118,5 +118,10 @@ namespace Natuurpark1._2
         {
 
         }
+
+        private void lblName_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

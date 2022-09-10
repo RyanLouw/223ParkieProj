@@ -43,6 +43,7 @@ namespace Natuurpark1._2
             this.label1 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.lbID = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -93,7 +94,7 @@ namespace Natuurpark1._2
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(324, 70);
+            this.dataGridView1.Location = new System.Drawing.Point(336, 81);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(551, 327);
@@ -122,7 +123,7 @@ namespace Natuurpark1._2
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(49, 148);
+            this.textBox2.Location = new System.Drawing.Point(49, 153);
             this.textBox2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(116, 20);
@@ -133,7 +134,7 @@ namespace Natuurpark1._2
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(46, 118);
+            this.label3.Location = new System.Drawing.Point(46, 128);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(60, 13);
@@ -142,7 +143,7 @@ namespace Natuurpark1._2
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(49, 81);
+            this.textBox1.Location = new System.Drawing.Point(49, 95);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(116, 20);
@@ -152,7 +153,7 @@ namespace Natuurpark1._2
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(46, 54);
+            this.label2.Location = new System.Drawing.Point(46, 65);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(43, 13);
@@ -191,12 +192,23 @@ namespace Natuurpark1._2
             this.lbID.TabIndex = 39;
             this.lbID.Visible = false;
             // 
+            // lblName
+            // 
+            this.lblName.AutoSize = true;
+            this.lblName.Font = new System.Drawing.Font("Segoe Script", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.Location = new System.Drawing.Point(359, 9);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(197, 67);
+            this.lblName.TabIndex = 40;
+            this.lblName.Text = "Workers";
+            // 
             // Workers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(63)))), ((int)(((byte)(33)))));
             this.ClientSize = new System.Drawing.Size(933, 450);
+            this.Controls.Add(this.lblName);
             this.Controls.Add(this.lbID);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label1);
@@ -238,5 +250,6 @@ namespace Natuurpark1._2
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label lbID;
+        private System.Windows.Forms.Label lblName;
     }
 }
