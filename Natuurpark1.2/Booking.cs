@@ -54,7 +54,17 @@ namespace Natuurpark1._2
         {
             string Ari = "";
             string Pay = "";
-            
+
+            if (checkBox1.Checked == true)
+                Pay = "T";
+            else
+                Pay = "F";
+
+
+            if (checkBox2.Checked == true)
+                Ari = "T";
+            else
+                Ari = "F";
 
             conn = new SqlConnection(constr);
              conn.Open();

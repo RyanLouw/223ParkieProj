@@ -135,5 +135,14 @@ namespace Natuurpark1._2
         {
 
         }
+
+        private void TypesBtn_Click(object sender, EventArgs e)
+        {
+            Hide();
+            House_Type form2 = new House_Type();
+            form2.ShowDialog();
+            form2 = null;
+            Show();
+        }
     }
 }
