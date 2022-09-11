@@ -32,7 +32,10 @@ namespace Natuurpark1._2
             SqlCommand com;
             adap = new SqlDataAdapter();
             data = new DataSet();
-            string sql = "Select * from House";
+            //SELECT Orders.OrderID, Customers.CustomerName, Orders.OrderDate FROM Orders INNER JOIN Customers ON Orders.CustomerID = Customers.CustomerID;
+           
+
+            string sql = "SELECT * from House left JOIN House_Type on House_Type.TypeID = House.House_typeID"; // die join werk moet nog net die naam laat wys 
             com = new SqlCommand(sql, conn);
             adap.SelectCommand = com;
             adap.Fill(data, "Lys");
@@ -134,6 +137,15 @@ namespace Natuurpark1._2
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void TypesBtn_Click(object sender, EventArgs e)
+        {
+            Hide();
+            House_Type form2 = new House_Type();
+            form2.ShowDialog();
+            form2 = null;
+            Show();
         }
     }
 }

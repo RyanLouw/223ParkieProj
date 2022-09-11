@@ -101,9 +101,9 @@ namespace Natuurpark1._2
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(39, 237);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 13);
+            this.label2.Size = new System.Drawing.Size(80, 13);
             this.label2.TabIndex = 20;
-            this.label2.Text = "Quantity:";
+            this.label2.Text = "Animal Type:";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // numericUpDown1

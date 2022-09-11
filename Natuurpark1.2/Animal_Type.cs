@@ -31,7 +31,7 @@ namespace Natuurpark1._2
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+            //alle ads moet n try catch nog kry
 
             string v="";
 

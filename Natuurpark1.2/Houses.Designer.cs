@@ -38,6 +38,7 @@ namespace Natuurpark1._2
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
             this.lbID = new System.Windows.Forms.Label();
+            this.TypesBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
@@ -46,7 +47,7 @@ namespace Natuurpark1._2
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(208, 264);
+            this.button3.Location = new System.Drawing.Point(208, 237);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 16;
@@ -57,7 +58,7 @@ namespace Natuurpark1._2
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(208, 217);
+            this.button2.Location = new System.Drawing.Point(208, 193);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 15;
@@ -68,7 +69,7 @@ namespace Natuurpark1._2
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(208, 177);
+            this.button1.Location = new System.Drawing.Point(208, 150);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 14;
@@ -132,12 +133,24 @@ namespace Natuurpark1._2
             this.lbID.Size = new System.Drawing.Size(0, 13);
             this.lbID.TabIndex = 38;
             // 
+            // TypesBtn
+            // 
+            this.TypesBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TypesBtn.Location = new System.Drawing.Point(208, 277);
+            this.TypesBtn.Name = "TypesBtn";
+            this.TypesBtn.Size = new System.Drawing.Size(75, 23);
+            this.TypesBtn.TabIndex = 39;
+            this.TypesBtn.Text = "Types";
+            this.TypesBtn.UseVisualStyleBackColor = true;
+            this.TypesBtn.Click += new System.EventHandler(this.TypesBtn_Click);
+            // 
             // Houses
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(63)))), ((int)(((byte)(33)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.TypesBtn);
             this.Controls.Add(this.lbID);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -168,5 +181,6 @@ namespace Natuurpark1._2
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbID;
+        private System.Windows.Forms.Button TypesBtn;
     }
 }

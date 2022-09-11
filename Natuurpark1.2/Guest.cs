@@ -138,7 +138,7 @@ namespace Natuurpark1._2
             SqlCommand com;
             adap = new SqlDataAdapter();
             data = new DataSet();
-            string sql = "Select * from Guests WHERE Guest_Email = '"+ Emailtxt.Text + "'";
+            string sql = "Select * from Guests WHERE Guest_Email  = '" + Emailtxt.Text + "'";
             com = new SqlCommand(sql, conn);
             adap.SelectCommand = com;
             adap.Fill(data, "Lys");
@@ -146,6 +146,7 @@ namespace Natuurpark1._2
             dataGridView1.DataMember = "Lys";
             conn.Close();
             //MessageBox.Show((dataGridView1.Rows.Count-1).ToString());
+            //
         }
     }
     
