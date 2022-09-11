@@ -146,6 +146,7 @@ namespace Natuurpark1._2
             dataGridView1.DataMember = "Lys";
             conn.Close();
             //MessageBox.Show((dataGridView1.Rows.Count-1).ToString());
+            //
         }
     }
     
