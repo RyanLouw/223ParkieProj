@@ -236,7 +236,7 @@ namespace Natuurpark1._2
 
             AmountOfBookings = dataGridView1.Rows.Count - 1;
             //die bo mag nie gesien word nie 
-            // MessageBox.Show(AmountOfBookings.ToString());
+           MessageBox.Show("This is the amount of booking in record for the date and house type "+AmountOfBookings.ToString());
 
             // kyk of ons n plek het met genoeg slaap plek
             conn = new SqlConnection(constr);
@@ -253,6 +253,7 @@ namespace Natuurpark1._2
             conn.Close();
             AmountOfBeds= dataGridView1.Rows.Count - 1;
 
+
             //die is om te kyk hoeveel kamers ons het met die regte hoeveel heid slaap plek.
 
             conn = new SqlConnection(constr);
@@ -268,6 +269,7 @@ namespace Natuurpark1._2
             dataGridView1.DataMember = "Lys";
             conn.Close();
             AmountOfHous = dataGridView1.Rows.Count - 1;
+            MessageBox.Show("This is the amount of houses why have of the trype " + AmountOfHous.ToString());
 
 
             //die bo mag nie gesien word nie 
