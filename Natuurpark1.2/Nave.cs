@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Natuurpark1._2
 {
     public partial class Nave : Form
@@ -64,7 +65,12 @@ namespace Natuurpark1._2
 
         private void Nave_Load(object sender, EventArgs e)
         {
-            
+            if(isAdmin.isAdm == true)
+            {
+                BtnWorkers.Show();
+            }
+            else
+            { BtnWorkers.Hide(); }
         }
     }
 }

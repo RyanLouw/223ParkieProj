@@ -102,7 +102,7 @@ namespace Natuurpark1._2
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(25, 156);
+            this.label3.Location = new System.Drawing.Point(25, 203);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(99, 13);
             this.label3.TabIndex = 25;
@@ -113,7 +113,7 @@ namespace Natuurpark1._2
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(25, 101);
+            this.label2.Location = new System.Drawing.Point(22, 104);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(88, 13);
             this.label2.TabIndex = 24;
@@ -124,7 +124,7 @@ namespace Natuurpark1._2
             this.checkBox2.AutoSize = true;
             this.checkBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox2.ForeColor = System.Drawing.Color.White;
-            this.checkBox2.Location = new System.Drawing.Point(25, 241);
+            this.checkBox2.Location = new System.Drawing.Point(25, 288);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(66, 17);
             this.checkBox2.TabIndex = 23;
@@ -137,7 +137,7 @@ namespace Natuurpark1._2
             this.checkBox1.AutoSize = true;
             this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox1.ForeColor = System.Drawing.Color.White;
-            this.checkBox1.Location = new System.Drawing.Point(25, 218);
+            this.checkBox1.Location = new System.Drawing.Point(25, 265);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(55, 17);
             this.checkBox1.TabIndex = 22;
@@ -183,7 +183,7 @@ namespace Natuurpark1._2
             // 
             // numericUpDown2
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(25, 183);
+            this.numericUpDown2.Location = new System.Drawing.Point(25, 230);
             this.numericUpDown2.Minimum = new decimal(new int[] {
             1,
             0,
@@ -200,7 +200,7 @@ namespace Natuurpark1._2
             // 
             // numericUpDown3
             // 
-            this.numericUpDown3.Location = new System.Drawing.Point(22, 368);
+            this.numericUpDown3.Location = new System.Drawing.Point(22, 401);
             this.numericUpDown3.Minimum = new decimal(new int[] {
             1,
             0,
@@ -220,7 +220,7 @@ namespace Natuurpark1._2
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(19, 343);
+            this.label5.Location = new System.Drawing.Point(22, 375);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(94, 13);
             this.label5.TabIndex = 37;
@@ -228,7 +228,7 @@ namespace Natuurpark1._2
             // 
             // numericUpDown4
             // 
-            this.numericUpDown4.Location = new System.Drawing.Point(22, 300);
+            this.numericUpDown4.Location = new System.Drawing.Point(22, 336);
             this.numericUpDown4.Minimum = new decimal(new int[] {
             1,
             0,
@@ -248,11 +248,11 @@ namespace Natuurpark1._2
             // 
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(19, 272);
+            this.label6.Location = new System.Drawing.Point(19, 309);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(123, 13);
             this.label6.TabIndex = 39;
-            this.label6.Text = "Amount of guests:";
+            this.label6.Text = "Guest Number:";
             // 
             // lbID
             // 
@@ -266,9 +266,9 @@ namespace Natuurpark1._2
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(261, 103);
+            this.button1.Location = new System.Drawing.Point(22, 155);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(101, 37);
+            this.button1.Size = new System.Drawing.Size(94, 36);
             this.button1.TabIndex = 42;
             this.button1.Text = "Check for hooking";
             this.button1.UseVisualStyleBackColor = true;

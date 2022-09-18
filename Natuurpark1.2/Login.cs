@@ -7,12 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
-namespace Natuurpark1._2
+static class isAdmin
 {
+    public static Boolean isAdm = false;
+}
+namespace Natuurpark1._2
+{   
+     
+   
     public partial class Login : Form
-    {
-        Boolean isAdmin = false;
+    {   
+        
         public Login()
         {
             InitializeComponent();
@@ -23,9 +28,9 @@ namespace Natuurpark1._2
 
             //this.Close();
 
-            if(UsernameTB.Text=="" && wagwoordTB.Text =="")
+            if(UsernameTB.Text=="admin" && wagwoordTB.Text =="admin")
             {
-                //maak boolian true
+                isAdmin.isAdm = true;
                 Hide();
                 Nave form2 = new Nave();
                 form2.ShowDialog();
@@ -33,6 +38,15 @@ namespace Natuurpark1._2
                 Show();
             }
             
+            else
+            {
+                isAdmin.isAdm=false;
+                Hide();
+                Nave form2 = new Nave();
+                form2.ShowDialog();
+                form2 = null;
+                Show();
+            }
         }
 
         private void usernameLB_Click(object sender, EventArgs e)

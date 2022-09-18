@@ -48,9 +48,9 @@ namespace Natuurpark1._2
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(208, 237);
+            this.button3.Location = new System.Drawing.Point(187, 333);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.Size = new System.Drawing.Size(92, 23);
             this.button3.TabIndex = 25;
             this.button3.Text = "Edit";
             this.button3.UseVisualStyleBackColor = true;
@@ -59,9 +59,9 @@ namespace Natuurpark1._2
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(208, 194);
+            this.button2.Location = new System.Drawing.Point(42, 374);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(92, 23);
             this.button2.TabIndex = 24;
             this.button2.Text = "Del";
             this.button2.UseVisualStyleBackColor = true;
@@ -70,9 +70,9 @@ namespace Natuurpark1._2
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(208, 150);
+            this.button1.Location = new System.Drawing.Point(42, 333);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(92, 23);
             this.button1.TabIndex = 23;
             this.button1.Text = "Add";
             this.button1.UseVisualStyleBackColor = true;
@@ -128,11 +128,11 @@ namespace Natuurpark1._2
             // button5
             // 
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(208, 277);
+            this.button5.Location = new System.Drawing.Point(187, 374);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.Size = new System.Drawing.Size(92, 23);
             this.button5.TabIndex = 27;
-            this.button5.Text = "button5";
+            this.button5.Text = "Animal Type";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 

@@ -77,6 +77,8 @@ namespace Natuurpark1._2
             cmd.Parameters.AddWithValue("@Size", int.Parse(typezizeupdown.Value.ToString()));
             cmd.ExecuteNonQuery();
             conn.Close();
+            MessageBox.Show("House Type has been added!","Add done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
         }
 
         private void button3_Click(object sender, EventArgs e)

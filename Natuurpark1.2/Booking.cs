@@ -236,7 +236,7 @@ namespace Natuurpark1._2
 
             AmountOfBookings = dataGridView1.Rows.Count - 1;
             //die bo mag nie gesien word nie 
-           MessageBox.Show("This is the amount of booking in record for the date and house type "+AmountOfBookings.ToString());
+           MessageBox.Show("Amount of bookings in record for the date and house type: "+AmountOfBookings.ToString());
 
             // kyk of ons n plek het met genoeg slaap plek
             conn = new SqlConnection(constr);
@@ -254,7 +254,7 @@ namespace Natuurpark1._2
             AmountOfBeds= dataGridView1.Rows.Count - 1;
 
 
-            //die is om te kyk hoeveel kamers ons het met die regte hoeveel heid slaap plek.
+            //die is om te kyk hoeveel kamers ons het met die regte hoeveelheid slaap plek.
 
             conn = new SqlConnection(constr);
             conn.Open();
@@ -269,7 +269,7 @@ namespace Natuurpark1._2
             dataGridView1.DataMember = "Lys";
             conn.Close();
             AmountOfHous = dataGridView1.Rows.Count - 1;
-            MessageBox.Show("This is the amount of houses why have of the trype " + AmountOfHous.ToString());
+            MessageBox.Show("This is the amount of houses we have of the type: " + AmountOfHous.ToString());
 
 
             //die bo mag nie gesien word nie 
@@ -292,13 +292,14 @@ namespace Natuurpark1._2
             bool booked = true;
             if (numericUpDown1.Value> AmountOfBeds)
             {
-                MessageBox.Show("Why dont have a place with enoth beds");//////////////////////////////////////////////////////////kyk spelling
+                MessageBox.Show("We dont have a place with enough beds",  "Not enough beds",MessageBoxButtons.OK,MessageBoxIcon.Warning);//////////////////////////////////////////////////////////kyk spelling
                 beds = false;
             }
             if (AmountOfBookings>= AmountOfHous)
             {
-                MessageBox.Show("Why are fully booked on the date pleas pice a new day or amount of beds");//////////////////////////////////////////////////////////kyk spelling
+                MessageBox.Show("We are fully booked on the date please pick a new day or amount of beds","Fully Booked",MessageBoxButtons.OK,MessageBoxIcon.Warning);//////////////////////////////////////////////////////////kyk spelling
                 booked = false;
+                
             }
 
             if (beds == false || booked == false)
