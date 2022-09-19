@@ -12,12 +12,12 @@ static class isAdmin
     public static Boolean isAdm = false;
 }
 namespace Natuurpark1._2
-{   
-     
-   
+{
+
+
     public partial class Login : Form
-    {   
-        
+    {
+
         public Login()
         {
             InitializeComponent();
@@ -28,7 +28,7 @@ namespace Natuurpark1._2
 
             //this.Close();
 
-            if(UsernameTB.Text=="admin" && wagwoordTB.Text =="admin")
+            if (UsernameTB.Text == "admin" && wagwoordTB.Text == "admin")
             {
                 isAdmin.isAdm = true;
                 Hide();
@@ -37,10 +37,10 @@ namespace Natuurpark1._2
                 form2 = null;
                 Show();
             }
-            
+
             else
             {
-                isAdmin.isAdm=false;
+                isAdmin.isAdm = false;
                 Hide();
                 Nave form2 = new Nave();
                 form2.ShowDialog();
