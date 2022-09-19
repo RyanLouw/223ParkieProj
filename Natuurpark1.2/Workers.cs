@@ -83,6 +83,27 @@ namespace Natuurpark1._2
 
         private void button1_Click(object sender, EventArgs e)
         {
+            string pattern = @"";
+            if (Regex.IsMatch(textBox1.Text, pattern))
+            {
+                errorProvider2.SetError(this.textBox2, "Please provide a valid name");
+            }
+            else
+            {
+                errorProvider2.Clear();
+               
+            }
+            
+            if (Regex.IsMatch(textBox1.Text, pattern))
+            {
+                errorProvider3.SetError(this.textBox2, "Please provide a valid surname");
+            }
+            else
+            {
+                errorProvider3.Clear();
+
+            }
+
             conn = new SqlConnection(constr);
             conn.Open();
             String query = "insert into Workers (Worker_Name,Worker_Surname,Worker_StartDate,Worker_Email) VALUES (@Name,@van,@date,@email)";
@@ -102,6 +123,26 @@ namespace Natuurpark1._2
 
         private void button2_Click(object sender, EventArgs e)
         {
+            string pattern = @"";
+            if (Regex.IsMatch(textBox1.Text, pattern))
+            {
+                errorProvider2.SetError(this.textBox2, "Please provide a valid name");
+            }
+            else
+            {
+                errorProvider2.Clear();
+
+            }
+
+            if (Regex.IsMatch(textBox1.Text, pattern))
+            {
+                errorProvider3.SetError(this.textBox2, "Please provide a valid surname");
+            }
+            else
+            {
+                errorProvider3.Clear();
+
+            }
             conn = new SqlConnection(constr);
             conn.Open();
             string qu = "";
@@ -131,10 +172,10 @@ namespace Natuurpark1._2
         {
             lbID.Text = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
             MessageBox.Show(lbID.Text);
-            textBox1.Text = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
-            textBox2.Text = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
-          //  dateTimePicker1.Value = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
-            textBox2.Text = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
+            textBox1.Text = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
+            textBox2.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
+            //  dateTimePicker1.Value = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
+            textBox2.Text = dataGridView1.SelectedRows[0].Cells[4].Value.ToString();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

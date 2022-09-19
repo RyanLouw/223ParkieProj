@@ -42,6 +42,10 @@ namespace Natuurpark1._2
             dataGridView1.DataMember = "Lys";
             conn.Close();
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 542a76ee9cd561ab38cae8dfc8162ab66dec36c3
             return;
         }
         private void Booking_Load(object sender, EventArgs e)
@@ -60,7 +64,10 @@ namespace Natuurpark1._2
              conn.Close();*/
 
             SQLreset("Select * from Booking");   //// die sqlreset Function is al die code wat gebruik moet word net die sql moet by gesit word
+<<<<<<< HEAD
 
+=======
+>>>>>>> 542a76ee9cd561ab38cae8dfc8162ab66dec36c3
 
         }
 
