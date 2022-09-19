@@ -29,6 +29,7 @@ namespace Natuurpark1._2
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -44,7 +45,9 @@ namespace Natuurpark1._2
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.lbID = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // button4
@@ -109,6 +112,8 @@ namespace Natuurpark1._2
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(116, 20);
             this.textBox3.TabIndex = 28;
+            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            this.textBox3.Validated += new System.EventHandler(this.textBox3_Validated);
             // 
             // label4
             // 
@@ -202,6 +207,10 @@ namespace Natuurpark1._2
             this.lblName.TabIndex = 40;
             this.lblName.Text = "Workers";
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // Workers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
@@ -229,6 +238,7 @@ namespace Natuurpark1._2
             this.Text = "Workers";
             this.Load += new System.EventHandler(this.Workers_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -251,5 +261,6 @@ namespace Natuurpark1._2
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label lbID;
         private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

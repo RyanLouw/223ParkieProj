@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.Text.RegularExpressions;
 
 namespace Natuurpark1._2
 {//start of something new 
@@ -147,6 +149,22 @@ namespace Natuurpark1._2
             conn.Close();
             //MessageBox.Show((dataGridView1.Rows.Count-1).ToString());
             //
+        }
+
+        private void Emailtxt_TextChanged(object sender, EventArgs e)
+        {
+
+            string pattern = @"^(?!\.)(""([^""\r\\]|\\[""\r\\])*""|"
+                + @"([-a-z0-9!#$%&'*+/=?^_`{|}~]|(?<!\.)\.)*)(?<!\.)"
+                + @"@[a-z0-9][\w\.-]*[a-z0-9]\.[a-z][a-z\.]*[a-z]$";
+            if (Regex.IsMatch(Emailtxt.Text, pattern))
+            {
+                errorProvider2.Clear();
+            }
+            else
+            {
+                errorProvider2.SetError(this.Emailtxt, "Please provide a valid email adres");
+            }
         }
     }
     

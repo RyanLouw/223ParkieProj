@@ -8,9 +8,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Text.RegularExpressions;
 
+ 
 namespace Natuurpark1._2
 {
+
     public partial class Workers : Form
     {
         public Workers()
@@ -142,6 +145,26 @@ namespace Natuurpark1._2
         private void button4_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void textBox3_Validated(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+            string pattern = @"^(?!\.)(""([^""\r\\]|\\[""\r\\])*""|"
+                + @"([-a-z0-9!#$%&'*+/=?^_`{|}~]|(?<!\.)\.)*)(?<!\.)"
+                + @"@[a-z0-9][\w\.-]*[a-z0-9]\.[a-z][a-z\.]*[a-z]$";
+            if (Regex.IsMatch(textBox3.Text, pattern))
+            {
+                errorProvider1.Clear();
+            }
+            else
+            {
+                errorProvider1.SetError(this.textBox3, "Please provide a valid email adres");
+            }
         }
     }
 }

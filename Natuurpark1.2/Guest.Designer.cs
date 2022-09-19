@@ -29,6 +29,7 @@ namespace Natuurpark1._2
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -42,7 +43,11 @@ namespace Natuurpark1._2
             this.label2 = new System.Windows.Forms.Label();
             this.lbID = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
             this.SuspendLayout();
             // 
             // button4
@@ -104,6 +109,7 @@ namespace Natuurpark1._2
             this.Emailtxt.Name = "Emailtxt";
             this.Emailtxt.Size = new System.Drawing.Size(100, 20);
             this.Emailtxt.TabIndex = 17;
+            this.Emailtxt.TextChanged += new System.EventHandler(this.Emailtxt_TextChanged);
             // 
             // label4
             // 
@@ -172,6 +178,14 @@ namespace Natuurpark1._2
             this.lblName.TabIndex = 39;
             this.lblName.Text = "Guests";
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // errorProvider2
+            // 
+            this.errorProvider2.ContainerControl = this;
+            // 
             // Guest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -195,6 +209,8 @@ namespace Natuurpark1._2
             this.Text = "Guest";
             this.Load += new System.EventHandler(this.Guest_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -215,5 +231,7 @@ namespace Natuurpark1._2
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lbID;
         private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.ErrorProvider errorProvider2;
     }
 }
