@@ -7,12 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-static class isAdmin
-{
-    public static Boolean isAdm = false;
-}
+
 namespace Natuurpark1._2
 {
+    static partial class isAdmin
+    {
+        public static Boolean isAdm = false;
+    }
 
 
     public partial class Login : Form

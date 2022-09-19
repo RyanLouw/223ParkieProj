@@ -101,6 +101,7 @@ namespace Natuurpark1._2
             this.lblName.Size = new System.Drawing.Size(534, 53);
             this.lblName.TabIndex = 11;
             this.lblName.Text = "Welcome to Parkie Gras Lodge";
+            this.lblName.Click += new System.EventHandler(this.lblName_Click);
             // 
             // Nave
             // 

@@ -72,5 +72,10 @@ namespace Natuurpark1._2
             else
             { BtnWorkers.Hide(); }
         }
+
+        private void lblName_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
