@@ -13,6 +13,8 @@ namespace Natuurpark1._2
 {
     public partial class Booking : Form
     {
+
+       
         public Booking()
         {
             InitializeComponent();
@@ -24,20 +26,40 @@ namespace Natuurpark1._2
         public SqlDataReader datar;
         string constr = @"Data Source=RYAN-PC;Initial Catalog=Park;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
 
-        private void Booking_Load(object sender, EventArgs e)
+
+        public void SQLreset(string sql)
         {
             conn = new SqlConnection(constr);
             conn.Open();
             SqlCommand com;
             adap = new SqlDataAdapter();
             data = new DataSet();
-            string sql = "Select * from Booking";
+            //
             com = new SqlCommand(sql, conn);
             adap.SelectCommand = com;
             adap.Fill(data, "Lys");
             dataGridView1.DataSource = data;
             dataGridView1.DataMember = "Lys";
             conn.Close();
+            return;
+        }
+        private void Booking_Load(object sender, EventArgs e)
+        {
+            /* conn = new SqlConnection(constr);
+             conn.Open();
+             SqlCommand com;
+             adap = new SqlDataAdapter();
+             data = new DataSet();
+             string sql = "Select * from Booking";
+             com = new SqlCommand(sql, conn);
+             adap.SelectCommand = com;
+             adap.Fill(data, "Lys");
+             dataGridView1.DataSource = data;
+             dataGridView1.DataMember = "Lys";
+             conn.Close();*/
+
+            SQLreset("Select * from Booking");   //// die sqlreset Function is al die code wat gebruik moet word net die sql moet by gesit word
+
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -89,6 +111,7 @@ namespace Natuurpark1._2
 
                     cmd.ExecuteNonQuery();
                     conn.Close();
+                    SQLreset("Select * from Booking");
                 }
                 catch (SystemException ex)
                 {
@@ -313,6 +336,15 @@ namespace Natuurpark1._2
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void GuestBTN_Click(object sender, EventArgs e)
+        {
+            Hide();
+            Guest form2 = new Guest();
+            form2.ShowDialog();
+            form2 = null;
+            Show();
         }
     }
 }

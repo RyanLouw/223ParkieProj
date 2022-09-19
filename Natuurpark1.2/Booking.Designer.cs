@@ -47,6 +47,7 @@ namespace Natuurpark1._2
             this.label6 = new System.Windows.Forms.Label();
             this.lbID = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.GuestBTN = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
@@ -201,8 +202,13 @@ namespace Natuurpark1._2
             // numericUpDown3
             // 
             this.numericUpDown3.Location = new System.Drawing.Point(22, 401);
+            this.numericUpDown3.Maximum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            0});
             this.numericUpDown3.Minimum = new decimal(new int[] {
-            1,
+            1002,
             0,
             0,
             0});
@@ -210,7 +216,7 @@ namespace Natuurpark1._2
             this.numericUpDown3.Size = new System.Drawing.Size(120, 20);
             this.numericUpDown3.TabIndex = 38;
             this.numericUpDown3.Value = new decimal(new int[] {
-            1,
+            1002,
             0,
             0,
             0});
@@ -274,12 +280,24 @@ namespace Natuurpark1._2
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // GuestBTN
+            // 
+            this.GuestBTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GuestBTN.Location = new System.Drawing.Point(187, 336);
+            this.GuestBTN.Name = "GuestBTN";
+            this.GuestBTN.Size = new System.Drawing.Size(101, 23);
+            this.GuestBTN.TabIndex = 43;
+            this.GuestBTN.Text = "Go to Guest";
+            this.GuestBTN.UseVisualStyleBackColor = true;
+            this.GuestBTN.Click += new System.EventHandler(this.GuestBTN_Click);
+            // 
             // Booking
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(63)))), ((int)(((byte)(33)))));
             this.ClientSize = new System.Drawing.Size(994, 450);
+            this.Controls.Add(this.GuestBTN);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.lbID);
             this.Controls.Add(this.numericUpDown4);
@@ -330,5 +348,6 @@ namespace Natuurpark1._2
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lbID;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button GuestBTN;
     }
 }
