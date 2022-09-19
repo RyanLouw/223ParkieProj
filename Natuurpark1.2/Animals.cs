@@ -35,7 +35,10 @@ namespace Natuurpark1._2
             SqlCommand com;
             adap = new SqlDataAdapter();
             data = new DataSet();
-            string sql = "Select * from Animals";
+            // string sql = "SELECT House.House_num , House.House_typeID  , House_Type.Type_Name from House JOIN House_Type on House_Type.TypeID = House.House_typeID"; // die join werk moet nog net die naam laat wys 
+            string sql = "SELECT Animals.Animal_ID , Animals.Animal_Type  , Animal_Type.AType_Name from Animals JOIN Animal_Type on Animal_Type.Animal_TypeID = Animals.Animal_ID"; // die join werk moet nog net die naam laat wys 
+
+            //  string sql = "Select * from Animals";
             com = new SqlCommand(sql, conn);
             adap.SelectCommand = com;
             adap.Fill(data, "Lys");

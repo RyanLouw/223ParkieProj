@@ -33,9 +33,10 @@ namespace Natuurpark1._2
             adap = new SqlDataAdapter();
             data = new DataSet();
             //SELECT Orders.OrderID, Customers.CustomerName, Orders.OrderDate FROM Orders INNER JOIN Customers ON Orders.CustomerID = Customers.CustomerID;
-           
 
-            string sql = "SELECT * from House left JOIN House_Type on House_Type.TypeID = House.House_typeID"; // die join werk moet nog net die naam laat wys 
+
+            //string sql = "SELECT * from House left JOIN House_Type on House_Type.TypeID = House.House_typeID"; // die join werk moet nog net die naam laat wys 
+            string sql = "SELECT House.House_num , House.House_typeID  , House_Type.Type_Name from House JOIN House_Type on House_Type.TypeID = House.House_typeID"; // die join werk moet nog net die naam laat wys 
             com = new SqlCommand(sql, conn);
             adap.SelectCommand = com;
             adap.Fill(data, "Lys");
@@ -84,7 +85,7 @@ namespace Natuurpark1._2
                 adap = new SqlDataAdapter();
                 data = new DataSet();
 
-                string sql = "Select * from House ";
+                string sql = "SELECT House.House_num , House.House_typeID  , House_Type.Type_Name from House JOIN House_Type on House_Type.TypeID = House.House_typeID";
                 com = new SqlCommand(sql, conn);
                 adap.SelectCommand = com;
                 adap.Fill(data, "Lys");
