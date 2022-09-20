@@ -248,6 +248,10 @@ namespace Natuurpark1._2
 
         bool kanBook = true;
         public int[] housnumberss;
+        int ID = 0;
+        int knewhous = 0;
+
+        bool chekneshouse = true;
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -268,32 +272,11 @@ namespace Natuurpark1._2
             dataGridView1.DataSource = data;
             dataGridView1.DataMember = "Lys";
             conn.Close();
-
-
             AmountOfBookings = dataGridView1.Rows.Count - 1;
-            int counter = 0;
-            SqlDataReader sqlDataReader = com.ExecuteReader();
-            if (sqlDataReader.HasRows)
-            {
-                while (sqlDataReader.Read())
-                {
-                    //  string YourFirstDataBaseTableColumn = sqlDataReader["SomeColumn"].ToString(); // Remember Type Casting is required here it has to be according to database column data type
-                    //lees eers iets in 
-                    try
-                    {
-                        housnumberss[counter] = int.Parse(sqlDataReader["House_num"].ToString());
-                    }
-                    catch (SystemException ex)
-                    {
-                        MessageBox.Show(string.Format("An error occurred: {0}", ex.Message));
-                    }
-                    counter++;
-
-                }
-            }
-            sqlDataReader.Close();
             //die bo mag nie gesien word nie 
             MessageBox.Show("Amount of bookings in record for the date and house type: "+AmountOfBookings.ToString());
+           
+
 
             // kyk of ons n plek het met genoeg slaap plek
             conn = new SqlConnection(constr);
@@ -329,8 +312,63 @@ namespace Natuurpark1._2
             MessageBox.Show("This is the amount of houses we have of the type: " + AmountOfHous.ToString());
 
 
-            //die bo mag nie gesien word nie 
 
+
+
+
+            /// Kyk wat die folgende hous number is.
+
+            conn = new SqlConnection(constr);
+            conn.Open();
+            SqlCommand com5;
+            adap = new SqlDataAdapter();
+            data = new DataSet();
+            //string sql = "Select Booking_Number from BOOKING where  Booking_Number=(select max( Booking_Number) From BOOKING )";
+            string sql5 = "Select House_ID from Booking where typeID = '" + numericUpDown1.Value + "' And House_ID=(select max( House_ID) From Booking ) And Booking_Date = '" + dateTimePicker1.Value + "'";
+            com5 = new SqlCommand(sql5, conn);
+            adap.SelectCommand = com5;
+            adap.Fill(data, "Lys");
+            dataGridView1.DataSource = data;
+            dataGridView1.DataMember = "Lys";
+            
+            SqlDataReader myReader = com5.ExecuteReader();
+            while (myReader.Read())
+            {
+                ID = myReader.GetInt32(0);
+            }
+            conn.Close();
+            myReader.Close();
+            MessageBox.Show("Kyk Of dit die mag getal gee" +ID.ToString()+ "and the next to chek is "+(ID+1).ToString());  // die wys die grootse getal.
+                                                                             //kyk of daai getal +1 in die DB is.
+
+            conn = new SqlConnection(constr);
+            conn.Open();
+            SqlCommand com6;
+            adap = new SqlDataAdapter();
+            data = new DataSet();
+            //string sql = "Select Booking_Number from BOOKING where  Booking_Number=(select max( Booking_Number) From BOOKING )";
+            string sql6 = "Select * from House where House_num = '" + (ID+1) + "' And House_typeID = '" + numericUpDown1.Value + "'";
+            com6 = new SqlCommand(sql6, conn);
+            adap.SelectCommand = com6;
+            adap.Fill(data, "Lys");
+            dataGridView1.DataSource = data;
+            dataGridView1.DataMember = "Lys";
+
+            SqlDataReader myReader2 = com6.ExecuteReader();
+
+            while (myReader2.Read())
+            {
+                knewhous = myReader2.GetInt32(0);
+            }
+            conn.Close();
+            MessageBox.Show("Kyk Of dit die mag getal gee"+knewhous.ToString());
+
+
+           
+
+            // die kyk of die nuwe 
+
+            //die bo mag nie gesien word nie  dus moet alle message box uit gehaal word
 
             conn = new SqlConnection(constr);
             conn.Open();
@@ -345,18 +383,10 @@ namespace Natuurpark1._2
             dataGridView1.DataMember = "Lys";
             conn.Close();
 
-            foreach (DataTable table in data.Tables)
-            {
-                foreach (DataRow row in table.Rows)
-                {
-                    Object[] values = row.ItemArray;
 
-                    if (int.Parse(values[0].ToString()) == int.Parse(numericUpDown3.Value.ToString()))
-                    {
-                        
-                    }
-                }
-            }
+           
+
+
 
 
             bool beds = true;
@@ -370,10 +400,21 @@ namespace Natuurpark1._2
             {
                 MessageBox.Show("We are fully booked on the date please pick a new day or amount of beds","Fully Booked",MessageBoxButtons.OK,MessageBoxIcon.Warning);//////////////////////////////////////////////////////////kyk spelling
                 booked = false;
-                
+
+            }
+            if (knewhous == 0)
+            {
+                //dit wil se daar is nie so een nie 
+                MessageBox.Show("fully booked or booking not in order");
+                chekneshouse = false;
+            }
+            else
+            {
+                numericUpDown3.Value = ID + 1;
             }
 
-            if (beds == false || booked == false)
+
+            if (beds == false || booked == false || chekneshouse== false)
                 kanBook = false;
 
 

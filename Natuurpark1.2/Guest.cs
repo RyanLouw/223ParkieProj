@@ -203,20 +203,31 @@ namespace Natuurpark1._2
 
         private void button4_Click(object sender, EventArgs e)
         {
-            conn = new SqlConnection(constr);
-            conn.Open();
-            SqlCommand com;
-            adap = new SqlDataAdapter();
-            data = new DataSet();
-            string sql = "Select * from Guests WHERE Guest_Email  = '" + Emailtxt.Text + "'";
-            com = new SqlCommand(sql, conn);
-            adap.SelectCommand = com;
-            adap.Fill(data, "Lys");
-            dataGridView1.DataSource = data;
-            dataGridView1.DataMember = "Lys";
-            conn.Close();
-            //MessageBox.Show((dataGridView1.Rows.Count-1).ToString());
-            //
+            try
+            {
+                conn = new SqlConnection(constr);
+                conn.Open();
+                SqlCommand com;
+                adap = new SqlDataAdapter();
+                data = new DataSet();
+
+
+                string sql = "Select * from Guests WHERE Guest_Email  = '" + Emailtxt.Text + "'";
+                com = new SqlCommand(sql, conn);
+                adap.SelectCommand = com;
+                adap.Fill(data, "Lys");
+                dataGridView1.DataSource = data;
+                dataGridView1.DataMember = "Lys";
+                conn.Close();
+                //MessageBox.Show((dataGridView1.Rows.Count-1).ToString());
+                //
+            }
+            catch (SystemException ex)
+            {
+                MessageBox.Show(string.Format("An error occurred: {0}", ex.Message));
+            }
+
+
         }
 
         private void Emailtxt_TextChanged(object sender, EventArgs e)

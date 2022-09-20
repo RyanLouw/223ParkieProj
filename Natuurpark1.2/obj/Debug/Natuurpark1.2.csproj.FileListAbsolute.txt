@@ -98,7 +98,6 @@ C:\Users\user\OneDrive\Desktop\2022\223\223ParkieProj\Natuurpark1.2\obj\Debug\Na
 C:\Users\user\OneDrive\Desktop\2022\223\223ParkieProj\Natuurpark1.2\obj\Debug\Natuurpark1._2.Guest.resources
 C:\Users\user\OneDrive\Desktop\2022\223\223ParkieProj\Natuurpark1.2\obj\Debug\Natuurpark1._2.Houses.resources
 C:\Users\user\OneDrive\Desktop\2022\223\223ParkieProj\Natuurpark1.2\obj\Debug\Natuurpark1._2.House_Type.resources
-C:\Users\user\OneDrive\Desktop\2022\223\223ParkieProj\Natuurpark1.2\obj\Debug\isAdmin.resources
 C:\Users\user\OneDrive\Desktop\2022\223\223ParkieProj\Natuurpark1.2\obj\Debug\Natuurpark1._2.Nave.resources
 C:\Users\user\OneDrive\Desktop\2022\223\223ParkieProj\Natuurpark1.2\obj\Debug\Natuurpark1._2.Properties.Resources.resources
 C:\Users\user\OneDrive\Desktop\2022\223\223ParkieProj\Natuurpark1.2\obj\Debug\Natuurpark1._2.Workers.resources
@@ -143,3 +142,4 @@ C:\Users\henco\OneDrive\Desktop\CMPG223\Natuurpark1.2\obj\Debug\Natuurpark1.2.cs
 C:\Users\henco\OneDrive\Desktop\CMPG223\Natuurpark1.2\obj\Debug\Natuurpark1.2.csproj.CoreCompileInputs.cache
 C:\Users\henco\OneDrive\Desktop\CMPG223\Natuurpark1.2\obj\Debug\Natuurpark1.2.exe
 C:\Users\henco\OneDrive\Desktop\CMPG223\Natuurpark1.2\obj\Debug\Natuurpark1.2.pdb
+C:\Users\user\OneDrive\Desktop\2022\223\223ParkieProj\Natuurpark1.2\obj\Debug\Natuurpark1._2.isAdmin.resources
