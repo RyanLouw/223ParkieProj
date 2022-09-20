@@ -68,16 +68,32 @@ namespace Natuurpark1._2
             if(isAdmin.isAdm == true)
             {
                 BtnWorkers.Show();
+                Reportbtn.Show();
             }
             else
             { 
-                BtnWorkers.Hide(); 
+                BtnWorkers.Hide();
+                Reportbtn.Hide();
             }
         }
 
         private void lblName_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Reportbtn_Click(object sender, EventArgs e)
+        {
+            Hide();
+            Report form2 = new Report();
+            form2.ShowDialog();
+            form2 = null;
+            Show();
         }
     }
 }

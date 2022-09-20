@@ -143,3 +143,4 @@ C:\Users\henco\OneDrive\Desktop\CMPG223\Natuurpark1.2\obj\Debug\Natuurpark1.2.cs
 C:\Users\henco\OneDrive\Desktop\CMPG223\Natuurpark1.2\obj\Debug\Natuurpark1.2.exe
 C:\Users\henco\OneDrive\Desktop\CMPG223\Natuurpark1.2\obj\Debug\Natuurpark1.2.pdb
 C:\Users\user\OneDrive\Desktop\2022\223\223ParkieProj\Natuurpark1.2\obj\Debug\Natuurpark1._2.isAdmin.resources
+C:\Users\user\OneDrive\Desktop\2022\223\223ParkieProj\Natuurpark1.2\obj\Debug\Natuurpark1._2.Report.resources

@@ -37,6 +37,7 @@ namespace Natuurpark1._2
             this.btnBooking = new System.Windows.Forms.Button();
             this.lblName = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.Reportbtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // BtnHouses
@@ -66,9 +67,9 @@ namespace Natuurpark1._2
             // BtnWorkers
             // 
             this.BtnWorkers.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnWorkers.Location = new System.Drawing.Point(314, 329);
+            this.BtnWorkers.Location = new System.Drawing.Point(202, 341);
             this.BtnWorkers.Name = "BtnWorkers";
-            this.BtnWorkers.Size = new System.Drawing.Size(178, 77);
+            this.BtnWorkers.Size = new System.Drawing.Size(183, 77);
             this.BtnWorkers.TabIndex = 7;
             this.BtnWorkers.Text = "Workers";
             this.toolTip1.SetToolTip(this.BtnWorkers, "Click here to view all workers");
@@ -110,12 +111,25 @@ namespace Natuurpark1._2
             this.lblName.Text = "Welcome to Parkie Gras Lodge";
             this.lblName.Click += new System.EventHandler(this.lblName_Click);
             // 
+            // Reportbtn
+            // 
+            this.Reportbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Reportbtn.Location = new System.Drawing.Point(419, 341);
+            this.Reportbtn.Name = "Reportbtn";
+            this.Reportbtn.Size = new System.Drawing.Size(178, 77);
+            this.Reportbtn.TabIndex = 12;
+            this.Reportbtn.Text = "Report";
+            this.toolTip1.SetToolTip(this.Reportbtn, "Click here to view all workers");
+            this.Reportbtn.UseVisualStyleBackColor = true;
+            this.Reportbtn.Click += new System.EventHandler(this.Reportbtn_Click);
+            // 
             // Nave
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(63)))), ((int)(((byte)(33)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Reportbtn);
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.BtnHouses);
             this.Controls.Add(this.BtnAn);
@@ -139,5 +153,6 @@ namespace Natuurpark1._2
         private System.Windows.Forms.Button btnBooking;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Button Reportbtn;
     }
 }
