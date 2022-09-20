@@ -50,6 +50,7 @@ namespace Natuurpark1._2
             this.button1 = new System.Windows.Forms.Button();
             this.GuestBTN = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.lblName = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
@@ -302,12 +303,23 @@ namespace Natuurpark1._2
             this.GuestBTN.UseVisualStyleBackColor = true;
             this.GuestBTN.Click += new System.EventHandler(this.GuestBTN_Click);
             // 
+            // lblName
+            // 
+            this.lblName.AutoSize = true;
+            this.lblName.Font = new System.Drawing.Font("Segoe Script", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.Location = new System.Drawing.Point(401, -12);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(197, 67);
+            this.lblName.TabIndex = 44;
+            this.lblName.Text = "Booking";
+            // 
             // Booking
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(63)))), ((int)(((byte)(33)))));
             this.ClientSize = new System.Drawing.Size(994, 450);
+            this.Controls.Add(this.lblName);
             this.Controls.Add(this.GuestBTN);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.lbID);
@@ -361,5 +373,6 @@ namespace Natuurpark1._2
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button GuestBTN;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Label lblName;
     }
 }

@@ -53,27 +53,30 @@ namespace Natuurpark1._2
 
             string ID = "";
             string date = "";
-            string woorker = "";
+            string worker = "";
             string pay = "";
             string ari = "";
             string house = "";
             string guest = "";
-            richTextBox1.AppendText( "ID\tDate\t\t\twoorker\tpayde\tarived\thouse number\tgeustid\t");
-            string newfile = "ID\tDate\t\t\twoorker\tpayde\tarived\thouse number\tgeustid\t";
+            richTextBox1.AppendText("Report for bookings dating from " + startdate.Value.ToString() + " till " + enddate.Value.ToString() );
+            richTextBox1.AppendText( "\n\nID\tDate\t\t\tWorker\tPaid\tarrived\tHouse number\tGuest id\t");
+            string newfile = "Report for bookings dating from " + startdate.Value.ToString() +  " till " + enddate.Value.ToString() + "n\nID\tDate\t\t\tWorker\tPaid\tArrived\tHouse number\tGuest Id\t" ;
             while (myReader.Read())
             {
                 ID = myReader.GetInt32(0).ToString();
 
                 date = myReader.GetValue(1).ToString();
-                woorker = myReader.GetInt32(2).ToString();
+                worker = myReader.GetInt32(2).ToString();
                 pay = myReader.GetString(3);
                 ari = myReader.GetString(4);
                 house = myReader.GetInt32(5).ToString();
                 guest = myReader.GetInt32(6).ToString();
 
-                MessageBox.Show(ID);
-                string txtt = ("\n" + ID + "\t" + date + "\t" + woorker + "\t" + pay + "\t" + ari + "\t" + house + "\t\t" + guest);
+                //MessageBox.Show(ID);
+                
+                string txtt = ("\n" + ID + "\t" + date + "\t" + worker + "\t" + pay + "\t" + ari + "\t" + house + "\t\t" + guest);
                 richTextBox1.AppendText(txtt);
+
                 newfile =newfile + txtt;
                 /* try
                  {
@@ -89,7 +92,7 @@ namespace Natuurpark1._2
                     using (System.IO.StreamWriter file =
                         new System.IO.StreamWriter(@"C:\Users\user\OneDrive\Desktop\2022\223\223ParkieProj\report.txt"))
                     {
-                        
+                            
                             file.WriteLine(newfile);
                         
                         

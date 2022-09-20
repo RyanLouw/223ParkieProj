@@ -40,6 +40,7 @@ namespace Natuurpark1._2
             this.lbID = new System.Windows.Forms.Label();
             this.typepricetxt = new System.Windows.Forms.TextBox();
             this.typezizeupdown = new System.Windows.Forms.NumericUpDown();
+            this.lblName = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.typezizeupdown)).BeginInit();
             this.SuspendLayout();
@@ -153,12 +154,23 @@ namespace Natuurpark1._2
             this.typezizeupdown.Size = new System.Drawing.Size(120, 20);
             this.typezizeupdown.TabIndex = 35;
             // 
+            // lblName
+            // 
+            this.lblName.AutoSize = true;
+            this.lblName.Font = new System.Drawing.Font("Segoe Script", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.Location = new System.Drawing.Point(227, 9);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(285, 67);
+            this.lblName.TabIndex = 40;
+            this.lblName.Text = "House Types";
+            // 
             // House_Type
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(63)))), ((int)(((byte)(33)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblName);
             this.Controls.Add(this.typepricetxt);
             this.Controls.Add(this.lbID);
             this.Controls.Add(this.typezizeupdown);
@@ -193,5 +205,6 @@ namespace Natuurpark1._2
         private System.Windows.Forms.Label lbID;
         private System.Windows.Forms.TextBox typepricetxt;
         private System.Windows.Forms.NumericUpDown typezizeupdown;
+        private System.Windows.Forms.Label lblName;
     }
 }
