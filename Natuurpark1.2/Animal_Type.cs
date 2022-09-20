@@ -32,23 +32,30 @@ namespace Natuurpark1._2
         private void button1_Click(object sender, EventArgs e)
         {
             //alle ads moet n try catch nog kry
+            try
+            {
+                string v = "";
 
-            string v="";
+                if (radioButton1.Checked == true)
+                    v = "T";
+                else
+                    v = "F";
+                //add of a an type
+                conn = new SqlConnection(constr);
+                conn.Open();
+                String query = "insert into Animal_Type (AType_Name,AType_Endangered) VALUES (@Name,@Endangered)";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@Name", AnimalTypeName.Text);
+                cmd.Parameters.AddWithValue("@Endangered", v);
+                cmd.ExecuteNonQuery();
+                conn.Close();
+            }
+            catch (SystemException ex)
+            {
+                MessageBox.Show(string.Format("An error occurred: {0}", ex.Message));
+            }
 
-            if (radioButton1.Checked == true)
-                v = "T";
-            else
-                v = "F";
-            //add of a an type
-           conn = new SqlConnection(constr);
-             conn.Open();
-             String query = "insert into Animal_Type (AType_Name,AType_Endangered) VALUES (@Name,@Endangered)";
-             SqlCommand cmd = new SqlCommand(query, conn);
-             cmd.Parameters.AddWithValue("@Name", AnimalTypeName.Text);
-             cmd.Parameters.AddWithValue("@Endangered", v);
-             cmd.ExecuteNonQuery();
-             conn.Close();
-            
+
         }
 
         private void Animal_Type_Load(object sender, EventArgs e)
@@ -102,26 +109,33 @@ namespace Natuurpark1._2
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string v = "";
+            try
+            {
+                string v = "";
 
-            if (radioButton1.Checked == true)
-                v = "T";
-            else
-                v = "F";
+                if (radioButton1.Checked == true)
+                    v = "T";
+                else
+                    v = "F";
 
-            conn = new SqlConnection(constr);
-            conn.Open();
-            string qu = "";
-            qu = " UPDATE Animal_Type SET Animal_Type = '" + AnimalTypeName.Text + "' WHERE Animal_TypeID = '" + lbID.Text + "'";
-            SqlCommand cmd = new SqlCommand(qu, conn);
-            cmd.ExecuteNonQuery();
+                conn = new SqlConnection(constr);
+                conn.Open();
+                string qu = "";
+                qu = " UPDATE Animal_Type SET Animal_Type = '" + AnimalTypeName.Text + "' WHERE Animal_TypeID = '" + lbID.Text + "'";
+                SqlCommand cmd = new SqlCommand(qu, conn);
+                cmd.ExecuteNonQuery();
 
-            qu = " UPDATE Animal_Type SET AType_Endangered = '" + v + "' WHERE Animal_TypeID = '" + lbID.Text + "'";
-            SqlCommand cmd1 = new SqlCommand(qu, conn);
-            cmd1.ExecuteNonQuery();
+                qu = " UPDATE Animal_Type SET AType_Endangered = '" + v + "' WHERE Animal_TypeID = '" + lbID.Text + "'";
+                SqlCommand cmd1 = new SqlCommand(qu, conn);
+                cmd1.ExecuteNonQuery();
 
-           
-            conn.Close();
+
+                conn.Close();
+            }
+            catch (SystemException ex)
+            {
+                MessageBox.Show(string.Format("An error occurred: {0}", ex.Message));
+            }
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -141,6 +155,18 @@ namespace Natuurpark1._2
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
+            conn = new SqlConnection(constr);
+            conn.Open();
+            SqlCommand com;
+            adap = new SqlDataAdapter();
+            data = new DataSet();
+            string sql = "Select * from Animal_Type where AType_Endangered ='" + radioButton1.Text + "'";
+            com = new SqlCommand(sql, conn);
+            adap.SelectCommand = com;
+            adap.Fill(data, "Lys");
+            dataGridView1.DataSource = data;
+            dataGridView1.DataMember = "Lys";
+            conn.Close();
 
         }
     }

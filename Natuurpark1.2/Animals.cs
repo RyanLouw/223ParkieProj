@@ -115,14 +115,21 @@ namespace Natuurpark1._2
 
         private void button3_Click(object sender, EventArgs e)
         {
-            conn = new SqlConnection(constr);
-            conn.Open();
-            string qu = "";
-            qu = " UPDATE Animals SET Animal_Type = '" + numericUpDown2.Value + "' WHERE Animal_ID = '" + numericUpDown1.Value + "'";
-            SqlCommand cmd = new SqlCommand(qu, conn);
-            cmd.ExecuteNonQuery();
+            try
+            {
+                conn = new SqlConnection(constr);
+                conn.Open();
+                string qu = "";
+                qu = " UPDATE Animals SET Animal_Type = '" + numericUpDown2.Value + "' WHERE Animal_ID = '" + numericUpDown1.Value + "'";
+                SqlCommand cmd = new SqlCommand(qu, conn);
+                cmd.ExecuteNonQuery();
 
-            conn.Close();
+                conn.Close();
+            }
+            catch (SystemException ex)
+            {
+                MessageBox.Show(string.Format("An error occurred: {0}", ex.Message));
+            }
         }
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)

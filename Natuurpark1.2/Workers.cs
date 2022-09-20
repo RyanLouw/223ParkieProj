@@ -83,44 +83,51 @@ namespace Natuurpark1._2
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
-            if (textBox1.Text == "")
-            {   
-                errorProvider2.SetError(this.textBox2, "Please provide a valid name");
-            }
-            else 
+            try
             {
-                errorProvider2.Clear();
-               
-            }
-            
-            if (textBox2.Text == "")
-            {
-                errorProvider3.SetError(this.textBox2, "Please provide a valid surname");
-            }
-            else
-            {
-                errorProvider3.Clear();
+                if (textBox1.Text == "")
+                {
+                    errorProvider2.SetError(this.textBox2, "Please provide a valid name");
+                }
+                else
+                {
+                    errorProvider2.Clear();
 
+                }
+
+                if (textBox2.Text == "")
+                {
+                    errorProvider3.SetError(this.textBox2, "Please provide a valid surname");
+                }
+                else
+                {
+                    errorProvider3.Clear();
+
+                }
+                if ((textBox1.Text == "") || (textBox2.Text == "") || ((textBox1.Text == "") && (textBox2.Text == "")))
+                {
+                    MessageBox.Show("All fields not selected", "Please Select all fields", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    conn = new SqlConnection(constr);
+                    conn.Open();
+                    String query = "insert into Workers (Worker_Name,Worker_Surname,Worker_StartDate,Worker_Email) VALUES (@Name,@van,@date,@email)";
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@Name", textBox1.Text);
+                    cmd.Parameters.AddWithValue("@van", textBox2.Text);
+                    cmd.Parameters.AddWithValue("@date", dateTimePicker1.Value);
+                    cmd.Parameters.AddWithValue("@email", textBox3.Text);
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+                }
             }
-            if ((textBox1.Text == "") || (textBox2.Text == "") || ((textBox1.Text == "") && (textBox2.Text == "")))
+            catch (SystemException ex)
             {
-                MessageBox.Show("All fields not selected", "Please Select all fields", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(string.Format("An error occurred: {0}", ex.Message));
             }
-            else
-            {
-                conn = new SqlConnection(constr);
-                conn.Open();
-                String query = "insert into Workers (Worker_Name,Worker_Surname,Worker_StartDate,Worker_Email) VALUES (@Name,@van,@date,@email)";
-                SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@Name", textBox1.Text);
-                cmd.Parameters.AddWithValue("@van", textBox2.Text);
-                cmd.Parameters.AddWithValue("@date", dateTimePicker1.Value);
-                cmd.Parameters.AddWithValue("@email", textBox3.Text);
-                cmd.ExecuteNonQuery();
-                conn.Close();
-            }
-        }
+        
+    }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
@@ -129,54 +136,61 @@ namespace Natuurpark1._2
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == "")
+            try
             {
-                errorProvider2.SetError(this.textBox2, "Please provide a valid name");
+                if (textBox1.Text == "")
+                {
+                    errorProvider2.SetError(this.textBox2, "Please provide a valid name");
+                }
+                else
+                {
+                    errorProvider2.Clear();
+
+                }
+
+                if (textBox2.Text == "")
+                {
+                    errorProvider3.SetError(this.textBox2, "Please provide a valid surname");
+                }
+                else
+                {
+                    errorProvider3.Clear();
+
+                }
+                if ((textBox1.Text == "") || (textBox2.Text == "") || ((textBox1.Text == "") && (textBox2.Text == "")))
+                {
+                    MessageBox.Show("All fields not selected", "Please Select all fields", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    conn = new SqlConnection(constr);
+                    conn.Open();
+                    string qu = "";
+                    //Price is n float onthou om die try orasl in te sit na als 100 wqerk
+
+                    qu = " UPDATE Workers SET Worker_Name = '" + textBox1.Text + "' WHERE Worker_ID = '" + lbID.Text + "'";
+                    SqlCommand cmd = new SqlCommand(qu, conn);
+                    cmd.ExecuteNonQuery();
+
+
+                    qu = " UPDATE Workers SET Worker_Surname = '" + textBox2.Text + "' WHERE Worker_ID = '" + lbID.Text + "'";
+                    SqlCommand cmd1 = new SqlCommand(qu, conn);
+                    cmd.ExecuteNonQuery();
+
+                    qu = " UPDATE Workers SET Worker_StartDate = '" + dateTimePicker1.Value + "' WHERE Worker_ID = '" + lbID.Text + "'";
+                    SqlCommand cmd2 = new SqlCommand(qu, conn);
+                    cmd.ExecuteNonQuery();
+
+                    qu = " UPDATE Workers SET Worker_Email = '" + textBox3.Text + "' WHERE Worker_ID = '" + lbID.Text + "'";
+                    SqlCommand cmd3 = new SqlCommand(qu, conn);
+                    cmd.ExecuteNonQuery();
+
+                    conn.Close();
+                }
             }
-            else
+            catch (SystemException ex)
             {
-                errorProvider2.Clear();
-
-            }
-
-            if (textBox2.Text == "")
-            {
-                errorProvider3.SetError(this.textBox2, "Please provide a valid surname");
-            }
-            else
-            {
-                errorProvider3.Clear();
-
-            }
-            if ((textBox1.Text == "") || (textBox2.Text == "") || ((textBox1.Text == "") && (textBox2.Text == "")))
-            {
-                MessageBox.Show("All fields not selected", "Please Select all fields", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            else
-            {
-                conn = new SqlConnection(constr);
-                conn.Open();
-                string qu = "";
-                //Price is n float onthou om die try orasl in te sit na als 100 wqerk
-
-                qu = " UPDATE Workers SET Worker_Name = '" + textBox1.Text + "' WHERE Worker_ID = '" + lbID.Text + "'";
-                SqlCommand cmd = new SqlCommand(qu, conn);
-                cmd.ExecuteNonQuery();
-
-
-                qu = " UPDATE Workers SET Worker_Surname = '" + textBox2.Text + "' WHERE Worker_ID = '" + lbID.Text + "'";
-                SqlCommand cmd1 = new SqlCommand(qu, conn);
-                cmd.ExecuteNonQuery();
-
-                qu = " UPDATE Workers SET Worker_StartDate = '" + dateTimePicker1.Value + "' WHERE Worker_ID = '" + lbID.Text + "'";
-                SqlCommand cmd2 = new SqlCommand(qu, conn);
-                cmd.ExecuteNonQuery();
-
-                qu = " UPDATE Workers SET Worker_Email = '" + textBox3.Text + "' WHERE Worker_ID = '" + lbID.Text + "'";
-                SqlCommand cmd3 = new SqlCommand(qu, conn);
-                cmd.ExecuteNonQuery();
-
-                conn.Close();
+                MessageBox.Show(string.Format("An error occurred: {0}", ex.Message));
             }
         }
 

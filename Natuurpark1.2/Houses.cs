@@ -47,13 +47,20 @@ namespace Natuurpark1._2
 
         private void button1_Click(object sender, EventArgs e)
         {
-            conn = new SqlConnection(constr);
-            conn.Open();
-            String query = "insert into House (House_typeID) VALUES (@House_type)";
-            SqlCommand cmd = new SqlCommand(query, conn);
-            cmd.Parameters.AddWithValue("@House_type", numericUpDown2.Value);
-            cmd.ExecuteNonQuery();
-            conn.Close();
+            try
+            {
+                conn = new SqlConnection(constr);
+                conn.Open();
+                String query = "insert into House (House_typeID) VALUES (@House_type)";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@House_type", numericUpDown2.Value);
+                cmd.ExecuteNonQuery();
+                conn.Close();
+            }
+            catch (SystemException ex)
+            {
+                MessageBox.Show(string.Format("An error occurred: {0}", ex.Message));
+            }
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -100,14 +107,21 @@ namespace Natuurpark1._2
 
         private void button3_Click(object sender, EventArgs e)
         {
-            conn = new SqlConnection(constr);
-            conn.Open();
-            string qu = "";
-            qu = " UPDATE House SET House_typeID = '" + numericUpDown2.Value + "' WHERE House_num = '" + lbID.Text + "'";
-            SqlCommand cmd = new SqlCommand(qu, conn);
-            cmd.ExecuteNonQuery();
+            try
+            {
+                conn = new SqlConnection(constr);
+                conn.Open();
+                string qu = "";
+                qu = " UPDATE House SET House_typeID = '" + numericUpDown2.Value + "' WHERE House_num = '" + lbID.Text + "'";
+                SqlCommand cmd = new SqlCommand(qu, conn);
+                cmd.ExecuteNonQuery();
 
-            conn.Close();
+                conn.Close();
+            }
+            catch (SystemException ex)
+            {
+                MessageBox.Show(string.Format("An error occurred: {0}", ex.Message));
+            }
         }
 
         private void button4_Click(object sender, EventArgs e)

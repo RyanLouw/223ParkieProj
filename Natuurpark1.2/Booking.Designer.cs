@@ -58,9 +58,10 @@ namespace Natuurpark1._2
             // dell
             // 
             this.dell.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dell.Location = new System.Drawing.Point(834, 408);
+            this.dell.Location = new System.Drawing.Point(1112, 502);
+            this.dell.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dell.Name = "dell";
-            this.dell.Size = new System.Drawing.Size(100, 23);
+            this.dell.Size = new System.Drawing.Size(133, 28);
             this.dell.TabIndex = 31;
             this.dell.Text = "Delete";
             this.dell.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -70,9 +71,10 @@ namespace Natuurpark1._2
             // edit
             // 
             this.edit.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.edit.Location = new System.Drawing.Point(638, 408);
+            this.edit.Location = new System.Drawing.Point(851, 502);
+            this.edit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.edit.Name = "edit";
-            this.edit.Size = new System.Drawing.Size(100, 23);
+            this.edit.Size = new System.Drawing.Size(133, 28);
             this.edit.TabIndex = 30;
             this.edit.Text = "Edit";
             this.edit.UseVisualStyleBackColor = true;
@@ -81,9 +83,10 @@ namespace Natuurpark1._2
             // Add
             // 
             this.Add.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Add.Location = new System.Drawing.Point(423, 408);
+            this.Add.Location = new System.Drawing.Point(564, 502);
+            this.Add.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Add.Name = "Add";
-            this.Add.Size = new System.Drawing.Size(101, 23);
+            this.Add.Size = new System.Drawing.Size(135, 28);
             this.Add.TabIndex = 29;
             this.Add.Text = "Add";
             this.Add.UseVisualStyleBackColor = true;
@@ -92,9 +95,11 @@ namespace Natuurpark1._2
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(377, 57);
+            this.dataGridView1.Location = new System.Drawing.Point(503, 70);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(595, 322);
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.Size = new System.Drawing.Size(793, 396);
             this.dataGridView1.TabIndex = 28;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -103,9 +108,10 @@ namespace Natuurpark1._2
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(25, 203);
+            this.label3.Location = new System.Drawing.Point(33, 250);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(99, 13);
+            this.label3.Size = new System.Drawing.Size(126, 17);
             this.label3.TabIndex = 25;
             this.label3.Text = "Worker Number:";
             // 
@@ -114,9 +120,10 @@ namespace Natuurpark1._2
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(22, 104);
+            this.label2.Location = new System.Drawing.Point(29, 128);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(88, 13);
+            this.label2.Size = new System.Drawing.Size(110, 17);
             this.label2.TabIndex = 24;
             this.label2.Text = "Booking Date:";
             // 
@@ -125,9 +132,10 @@ namespace Natuurpark1._2
             this.checkBox2.AutoSize = true;
             this.checkBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox2.ForeColor = System.Drawing.Color.White;
-            this.checkBox2.Location = new System.Drawing.Point(25, 288);
+            this.checkBox2.Location = new System.Drawing.Point(33, 354);
+            this.checkBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(66, 17);
+            this.checkBox2.Size = new System.Drawing.Size(82, 21);
             this.checkBox2.TabIndex = 23;
             this.checkBox2.Text = "Arrived";
             this.checkBox2.UseVisualStyleBackColor = true;
@@ -138,9 +146,10 @@ namespace Natuurpark1._2
             this.checkBox1.AutoSize = true;
             this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox1.ForeColor = System.Drawing.Color.White;
-            this.checkBox1.Location = new System.Drawing.Point(25, 265);
+            this.checkBox1.Location = new System.Drawing.Point(33, 326);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(55, 17);
+            this.checkBox1.Size = new System.Drawing.Size(67, 21);
             this.checkBox1.TabIndex = 22;
             this.checkBox1.Text = "Paid ";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -148,32 +157,36 @@ namespace Natuurpark1._2
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(25, 120);
+            this.dateTimePicker1.Location = new System.Drawing.Point(33, 148);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(265, 22);
             this.dateTimePicker1.TabIndex = 20;
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(25, 42);
+            this.label1.Location = new System.Drawing.Point(33, 52);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 13);
+            this.label1.Size = new System.Drawing.Size(128, 17);
             this.label1.TabIndex = 18;
             this.label1.Text = "Number of beds:";
             // 
             // numericUpDown1
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(28, 67);
+            this.numericUpDown1.Location = new System.Drawing.Point(37, 82);
+            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.numericUpDown1.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
             this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
+            this.numericUpDown1.Size = new System.Drawing.Size(160, 22);
             this.numericUpDown1.TabIndex = 35;
             this.numericUpDown1.Value = new decimal(new int[] {
             1,
@@ -184,14 +197,15 @@ namespace Natuurpark1._2
             // 
             // numericUpDown2
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(25, 230);
+            this.numericUpDown2.Location = new System.Drawing.Point(33, 283);
+            this.numericUpDown2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.numericUpDown2.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
             this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(120, 20);
+            this.numericUpDown2.Size = new System.Drawing.Size(160, 22);
             this.numericUpDown2.TabIndex = 36;
             this.numericUpDown2.Value = new decimal(new int[] {
             1,
@@ -201,7 +215,8 @@ namespace Natuurpark1._2
             // 
             // numericUpDown3
             // 
-            this.numericUpDown3.Location = new System.Drawing.Point(22, 401);
+            this.numericUpDown3.Location = new System.Drawing.Point(29, 494);
+            this.numericUpDown3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.numericUpDown3.Maximum = new decimal(new int[] {
             99999,
             0,
@@ -213,35 +228,38 @@ namespace Natuurpark1._2
             0,
             0});
             this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(120, 20);
+            this.numericUpDown3.Size = new System.Drawing.Size(160, 22);
             this.numericUpDown3.TabIndex = 38;
             this.numericUpDown3.Value = new decimal(new int[] {
             1002,
             0,
             0,
             0});
+            this.numericUpDown3.ValueChanged += new System.EventHandler(this.numericUpDown3_ValueChanged);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(22, 375);
+            this.label5.Location = new System.Drawing.Point(29, 462);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(94, 13);
+            this.label5.Size = new System.Drawing.Size(120, 17);
             this.label5.TabIndex = 37;
             this.label5.Text = "House Number:";
             // 
             // numericUpDown4
             // 
-            this.numericUpDown4.Location = new System.Drawing.Point(22, 336);
+            this.numericUpDown4.Location = new System.Drawing.Point(29, 414);
+            this.numericUpDown4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.numericUpDown4.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
             this.numericUpDown4.Name = "numericUpDown4";
-            this.numericUpDown4.Size = new System.Drawing.Size(120, 20);
+            this.numericUpDown4.Size = new System.Drawing.Size(160, 22);
             this.numericUpDown4.TabIndex = 40;
             this.numericUpDown4.Value = new decimal(new int[] {
             1,
@@ -254,27 +272,30 @@ namespace Natuurpark1._2
             // 
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(19, 309);
+            this.label6.Location = new System.Drawing.Point(25, 380);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(123, 13);
+            this.label6.Size = new System.Drawing.Size(164, 16);
             this.label6.TabIndex = 39;
             this.label6.Text = "Guest Number:";
             // 
             // lbID
             // 
             this.lbID.AutoSize = true;
-            this.lbID.Location = new System.Drawing.Point(72, 408);
+            this.lbID.Location = new System.Drawing.Point(96, 502);
+            this.lbID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbID.Name = "lbID";
-            this.lbID.Size = new System.Drawing.Size(0, 13);
+            this.lbID.Size = new System.Drawing.Size(0, 17);
             this.lbID.TabIndex = 41;
             this.lbID.Visible = false;
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(22, 155);
+            this.button1.Location = new System.Drawing.Point(29, 191);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 36);
+            this.button1.Size = new System.Drawing.Size(125, 44);
             this.button1.TabIndex = 42;
             this.button1.Text = "Check for hooking";
             this.button1.UseVisualStyleBackColor = true;
@@ -283,9 +304,10 @@ namespace Natuurpark1._2
             // GuestBTN
             // 
             this.GuestBTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GuestBTN.Location = new System.Drawing.Point(187, 336);
+            this.GuestBTN.Location = new System.Drawing.Point(249, 414);
+            this.GuestBTN.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.GuestBTN.Name = "GuestBTN";
-            this.GuestBTN.Size = new System.Drawing.Size(101, 23);
+            this.GuestBTN.Size = new System.Drawing.Size(135, 28);
             this.GuestBTN.TabIndex = 43;
             this.GuestBTN.Text = "Go to Guest";
             this.GuestBTN.UseVisualStyleBackColor = true;
@@ -293,10 +315,10 @@ namespace Natuurpark1._2
             // 
             // Booking
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(63)))), ((int)(((byte)(33)))));
-            this.ClientSize = new System.Drawing.Size(994, 450);
+            this.ClientSize = new System.Drawing.Size(1325, 554);
             this.Controls.Add(this.GuestBTN);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.lbID);
@@ -316,6 +338,7 @@ namespace Natuurpark1._2
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Booking";
             this.Text = "Booking";
             this.Load += new System.EventHandler(this.Booking_Load);

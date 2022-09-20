@@ -68,16 +68,23 @@ namespace Natuurpark1._2
 
         private void button1_Click(object sender, EventArgs e)
         {
-            conn = new SqlConnection(constr);
-            conn.Open();
-            String query = "insert into House_Type (Type_Price,Type_Name,Type_Size) VALUES (@Price,@Name,@Size)";
-            SqlCommand cmd = new SqlCommand(query, conn);
-            cmd.Parameters.AddWithValue("@Price", float.Parse(typepricetxt.Text));
-            cmd.Parameters.AddWithValue("@Name", TypeNAmeTxt.Text);
-            cmd.Parameters.AddWithValue("@Size", int.Parse(typezizeupdown.Value.ToString()));
-            cmd.ExecuteNonQuery();
-            conn.Close();
-            MessageBox.Show("House Type has been added!","Add done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            try
+            {
+                conn = new SqlConnection(constr);
+                conn.Open();
+                String query = "insert into House_Type (Type_Price,Type_Name,Type_Size) VALUES (@Price,@Name,@Size)";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@Price", float.Parse(typepricetxt.Text));
+                cmd.Parameters.AddWithValue("@Name", TypeNAmeTxt.Text);
+                cmd.Parameters.AddWithValue("@Size", int.Parse(typezizeupdown.Value.ToString()));
+                cmd.ExecuteNonQuery();
+                conn.Close();
+                MessageBox.Show("House Type has been added!", "Add done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (SystemException ex)
+            {
+                MessageBox.Show(string.Format("An error occurred: {0}", ex.Message));
+            }
 
         }
 
@@ -137,25 +144,32 @@ namespace Natuurpark1._2
 
         private void button2_Click(object sender, EventArgs e)
         {
-            conn = new SqlConnection(constr);
-            conn.Open();
-            string qu = "";
-            //Price is n float onthou om die try orasl in te sit na als 100 wqerk
+            try
+            {
+                conn = new SqlConnection(constr);
+                conn.Open();
+                string qu = "";
+                //Price is n float onthou om die try orasl in te sit na als 100 wqerk
 
-            qu = " UPDATE House_Type SET Type_Price = '" + float.Parse(typepricetxt.Text) + "' WHERE TypeID = '" + lbID.Text + "'";
-            SqlCommand cmd = new SqlCommand(qu, conn);
-            cmd.ExecuteNonQuery();
+                qu = " UPDATE House_Type SET Type_Price = '" + float.Parse(typepricetxt.Text) + "' WHERE TypeID = '" + lbID.Text + "'";
+                SqlCommand cmd = new SqlCommand(qu, conn);
+                cmd.ExecuteNonQuery();
 
 
-            qu = " UPDATE House_Type SET Type_Name = '" + TypeNAmeTxt.Text + "' WHERE TypeID = '" + lbID.Text + "'";
-            SqlCommand cmd1 = new SqlCommand(qu, conn);
-            cmd.ExecuteNonQuery();
+                qu = " UPDATE House_Type SET Type_Name = '" + TypeNAmeTxt.Text + "' WHERE TypeID = '" + lbID.Text + "'";
+                SqlCommand cmd1 = new SqlCommand(qu, conn);
+                cmd.ExecuteNonQuery();
 
-            qu = " UPDATE House_Type SET Type_Size = '" + typezizeupdown.Value + "' WHERE TypeID = '" + lbID.Text + "'";
-            SqlCommand cmd2 = new SqlCommand(qu, conn);
-            cmd.ExecuteNonQuery();
+                qu = " UPDATE House_Type SET Type_Size = '" + typezizeupdown.Value + "' WHERE TypeID = '" + lbID.Text + "'";
+                SqlCommand cmd2 = new SqlCommand(qu, conn);
+                cmd.ExecuteNonQuery();
 
-            conn.Close();
+                conn.Close();
+            }
+            catch (SystemException ex)
+            {
+                MessageBox.Show(string.Format("An error occurred: {0}", ex.Message));
+            }
         }
     }
 }

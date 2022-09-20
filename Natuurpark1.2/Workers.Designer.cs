@@ -104,6 +104,7 @@ namespace Natuurpark1._2
             this.dataGridView1.Location = new System.Drawing.Point(336, 81);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(551, 327);
             this.dataGridView1.TabIndex = 29;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -114,7 +115,7 @@ namespace Natuurpark1._2
             this.textBox3.Location = new System.Drawing.Point(49, 277);
             this.textBox3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(116, 20);
+            this.textBox3.Size = new System.Drawing.Size(116, 23);
             this.textBox3.TabIndex = 28;
             this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             this.textBox3.Validated += new System.EventHandler(this.textBox3_Validated);
@@ -126,7 +127,7 @@ namespace Natuurpark1._2
             this.label4.Location = new System.Drawing.Point(46, 251);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(83, 13);
+            this.label4.Size = new System.Drawing.Size(107, 17);
             this.label4.TabIndex = 27;
             this.label4.Text = "Email Adress:";
             // 
@@ -135,7 +136,7 @@ namespace Natuurpark1._2
             this.textBox2.Location = new System.Drawing.Point(49, 153);
             this.textBox2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(116, 20);
+            this.textBox2.Size = new System.Drawing.Size(116, 23);
             this.textBox2.TabIndex = 26;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
@@ -146,7 +147,7 @@ namespace Natuurpark1._2
             this.label3.Location = new System.Drawing.Point(46, 128);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 13);
+            this.label3.Size = new System.Drawing.Size(77, 17);
             this.label3.TabIndex = 25;
             this.label3.Text = "Surname:";
             // 
@@ -155,7 +156,7 @@ namespace Natuurpark1._2
             this.textBox1.Location = new System.Drawing.Point(49, 95);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(116, 20);
+            this.textBox1.Size = new System.Drawing.Size(116, 23);
             this.textBox1.TabIndex = 24;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -166,7 +167,7 @@ namespace Natuurpark1._2
             this.label2.Location = new System.Drawing.Point(46, 65);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 13);
+            this.label2.Size = new System.Drawing.Size(54, 17);
             this.label2.TabIndex = 23;
             this.label2.Text = "Name:";
             // 
@@ -177,7 +178,7 @@ namespace Natuurpark1._2
             this.label1.Location = new System.Drawing.Point(46, 191);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 13);
+            this.label1.Size = new System.Drawing.Size(85, 17);
             this.label1.TabIndex = 34;
             this.label1.Text = "Start date:";
             // 
@@ -187,7 +188,7 @@ namespace Natuurpark1._2
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dateTimePicker1.MinDate = new System.DateTime(1989, 1, 1, 0, 0, 0, 0);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(233, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(233, 23);
             this.dateTimePicker1.TabIndex = 35;
             this.dateTimePicker1.Value = new System.DateTime(2022, 9, 10, 0, 0, 0, 0);
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
@@ -198,7 +199,7 @@ namespace Natuurpark1._2
             this.lbID.Location = new System.Drawing.Point(321, 20);
             this.lbID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbID.Name = "lbID";
-            this.lbID.Size = new System.Drawing.Size(0, 13);
+            this.lbID.Size = new System.Drawing.Size(0, 17);
             this.lbID.TabIndex = 39;
             this.lbID.Visible = false;
             // 
@@ -206,9 +207,9 @@ namespace Natuurpark1._2
             // 
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Segoe Script", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(359, 9);
+            this.lblName.Location = new System.Drawing.Point(363, -5);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(197, 67);
+            this.lblName.Size = new System.Drawing.Size(244, 83);
             this.lblName.TabIndex = 40;
             this.lblName.Text = "Workers";
             // 
@@ -226,7 +227,7 @@ namespace Natuurpark1._2
             // 
             // Workers
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(63)))), ((int)(((byte)(33)))));
             this.ClientSize = new System.Drawing.Size(933, 450);

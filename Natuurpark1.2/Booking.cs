@@ -137,47 +137,54 @@ namespace Natuurpark1._2
 
         private void del_Click(object sender, EventArgs e)
         {
+            try
+            {
+                //try catch
+                conn = new SqlConnection(constr);
+                conn.Open();
+                string qu = "";
+                string Ari = "";
+                string Pay = "";
 
-            //try catch
-            conn = new SqlConnection(constr);
-            conn.Open();
-            string qu = "";
-            string Ari = "";
-            string Pay = "";
-
-            //moet weer kyk of die plek moontelik is 
-
-
-            qu = " UPDATE Booking SET Booking_Date = '" + dateTimePicker1.Value + "' WHERE Booking_ID = '" + lbID.Text + "'";
-            SqlCommand cmd = new SqlCommand(qu, conn);
-            cmd.ExecuteNonQuery();
+                //moet weer kyk of die plek moontelik is 
 
 
-            qu = " UPDATE Booking SET Worker_ID = '" + numericUpDown2.Value + "' WHERE Booking_ID = '" + lbID.Text + "'";
-            SqlCommand cmd1 = new SqlCommand(qu, conn);
-            cmd.ExecuteNonQuery();
+                qu = " UPDATE Booking SET Booking_Date = '" + dateTimePicker1.Value + "' WHERE Booking_ID = '" + lbID.Text + "'";
+                SqlCommand cmd = new SqlCommand(qu, conn);
+                cmd.ExecuteNonQuery();
 
-            qu = " UPDATE Booking SET Booking_Pay = '" + Pay + "' WHERE Booking_ID = '" + lbID.Text + "'";
-            SqlCommand cmd2 = new SqlCommand(qu, conn);
-            cmd.ExecuteNonQuery();
 
-            qu = " UPDATE Booking SET Guest_Ari = '" + Ari + "' WHERE Booking_ID = '" + lbID.Text + "'";
-            SqlCommand cmd3 = new SqlCommand(qu, conn);
-            cmd.ExecuteNonQuery();
-            //////// 
-            qu = " UPDATE Booking SET House_ID = '" + numericUpDown3.Value + "' WHERE Booking_ID = '" + lbID.Text + "'";
-            SqlCommand cmd4 = new SqlCommand(qu, conn);
-            cmd.ExecuteNonQuery();
+                qu = " UPDATE Booking SET Worker_ID = '" + numericUpDown2.Value + "' WHERE Booking_ID = '" + lbID.Text + "'";
+                SqlCommand cmd1 = new SqlCommand(qu, conn);
+                cmd.ExecuteNonQuery();
 
-            qu = " UPDATE Booking SET Guest_ID = '" + numericUpDown4.Value + "' WHERE Booking_ID = '" + lbID.Text + "'";
-            SqlCommand cmd5 = new SqlCommand(qu, conn);
-            cmd.ExecuteNonQuery();
+                qu = " UPDATE Booking SET Booking_Pay = '" + Pay + "' WHERE Booking_ID = '" + lbID.Text + "'";
+                SqlCommand cmd2 = new SqlCommand(qu, conn);
+                cmd.ExecuteNonQuery();
 
-            qu = " UPDATE Booking SET typeID = '" + numericUpDown1.Value + "' WHERE Booking_ID = '" + lbID.Text + "'";
-            SqlCommand cmd6 = new SqlCommand(qu, conn);
-            cmd.ExecuteNonQuery();
+                qu = " UPDATE Booking SET Guest_Ari = '" + Ari + "' WHERE Booking_ID = '" + lbID.Text + "'";
+                SqlCommand cmd3 = new SqlCommand(qu, conn);
+                cmd.ExecuteNonQuery();
+                //////// 
+                qu = " UPDATE Booking SET House_ID = '" + numericUpDown3.Value + "' WHERE Booking_ID = '" + lbID.Text + "'";
+                SqlCommand cmd4 = new SqlCommand(qu, conn);
+                cmd.ExecuteNonQuery();
 
-            conn.Close();
+                qu = " UPDATE Booking SET Guest_ID = '" + numericUpDown4.Value + "' WHERE Booking_ID = '" + lbID.Text + "'";
+                SqlCommand cmd5 = new SqlCommand(qu, conn);
+                cmd.ExecuteNonQuery();
+
+                qu = " UPDATE Booking SET typeID = '" + numericUpDown1.Value + "' WHERE Booking_ID = '" + lbID.Text + "'";
+                SqlCommand cmd6 = new SqlCommand(qu, conn);
+                cmd.ExecuteNonQuery();
+
+                conn.Close();
+            }
+            catch (SystemException ex)
+            {
+                MessageBox.Show(string.Format("An error occurred: {0}", ex.Message));
+            }
+
 
         }
 
@@ -247,6 +254,7 @@ namespace Natuurpark1._2
             int AmountOfBookings = 0;
             int AmountOfBeds = 0;
             int AmountOfHous = 0;
+            DataTable dt;
 
             conn = new SqlConnection(constr);
             conn.Open();
@@ -260,6 +268,7 @@ namespace Natuurpark1._2
             dataGridView1.DataSource = data;
             dataGridView1.DataMember = "Lys";
             conn.Close();
+
 
             AmountOfBookings = dataGridView1.Rows.Count - 1;
             int counter = 0;
@@ -336,6 +345,20 @@ namespace Natuurpark1._2
             dataGridView1.DataMember = "Lys";
             conn.Close();
 
+            foreach (DataTable table in data.Tables)
+            {
+                foreach (DataRow row in table.Rows)
+                {
+                    Object[] values = row.ItemArray;
+
+                    if (int.Parse(values[0].ToString()) == int.Parse(numericUpDown3.Value.ToString()))
+                    {
+                        
+                    }
+                }
+            }
+
+
             bool beds = true;
             bool booked = true;
             if (numericUpDown1.Value> AmountOfBeds)
@@ -370,6 +393,28 @@ namespace Natuurpark1._2
             form2.ShowDialog();
             form2 = null;
             Show();
+        }
+
+        private void numericUpDown3_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+            conn = new SqlConnection(constr);
+            conn.Open();
+            SqlCommand com3;
+            adap = new SqlDataAdapter();
+            data = new DataSet();
+            string sql3 = "Select * from Booking where Booking_Date >= '" + dateTimePicker1.Value.Date + "'";
+            com3 = new SqlCommand(sql3, conn);
+            adap.SelectCommand = com3;
+            adap.Fill(data, "Lys");
+            dataGridView1.DataSource = data;
+            dataGridView1.DataMember = "Lys";
+            conn.Close();
+
         }
     }
 }
