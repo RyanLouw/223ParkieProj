@@ -240,6 +240,7 @@ namespace Natuurpark1._2
         }
 
         bool kanBook = true;
+        public int[] housnumberss;
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -261,8 +262,29 @@ namespace Natuurpark1._2
             conn.Close();
 
             AmountOfBookings = dataGridView1.Rows.Count - 1;
+            int counter = 0;
+            SqlDataReader sqlDataReader = com.ExecuteReader();
+            if (sqlDataReader.HasRows)
+            {
+                while (sqlDataReader.Read())
+                {
+                    //  string YourFirstDataBaseTableColumn = sqlDataReader["SomeColumn"].ToString(); // Remember Type Casting is required here it has to be according to database column data type
+                    //lees eers iets in 
+                    try
+                    {
+                        housnumberss[counter] = int.Parse(sqlDataReader["House_num"].ToString());
+                    }
+                    catch (SystemException ex)
+                    {
+                        MessageBox.Show(string.Format("An error occurred: {0}", ex.Message));
+                    }
+                    counter++;
+
+                }
+            }
+            sqlDataReader.Close();
             //die bo mag nie gesien word nie 
-           MessageBox.Show("Amount of bookings in record for the date and house type: "+AmountOfBookings.ToString());
+            MessageBox.Show("Amount of bookings in record for the date and house type: "+AmountOfBookings.ToString());
 
             // kyk of ons n plek het met genoeg slaap plek
             conn = new SqlConnection(constr);

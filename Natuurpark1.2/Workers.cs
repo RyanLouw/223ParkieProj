@@ -83,18 +83,18 @@ namespace Natuurpark1._2
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string pattern = @"";
-            if (Regex.IsMatch(textBox1.Text, pattern))
-            {
+            
+            if (textBox1.Text == "")
+            {   
                 errorProvider2.SetError(this.textBox2, "Please provide a valid name");
             }
-            else
+            else 
             {
                 errorProvider2.Clear();
                
             }
             
-            if (Regex.IsMatch(textBox1.Text, pattern))
+            if (textBox2.Text == "")
             {
                 errorProvider3.SetError(this.textBox2, "Please provide a valid surname");
             }
@@ -103,17 +103,23 @@ namespace Natuurpark1._2
                 errorProvider3.Clear();
 
             }
-
-            conn = new SqlConnection(constr);
-            conn.Open();
-            String query = "insert into Workers (Worker_Name,Worker_Surname,Worker_StartDate,Worker_Email) VALUES (@Name,@van,@date,@email)";
-            SqlCommand cmd = new SqlCommand(query, conn);
-            cmd.Parameters.AddWithValue("@Name", textBox1.Text);
-            cmd.Parameters.AddWithValue("@van", textBox2.Text);
-            cmd.Parameters.AddWithValue("@date", dateTimePicker1.Value);
-            cmd.Parameters.AddWithValue("@email", textBox3.Text);
-            cmd.ExecuteNonQuery();
-            conn.Close();
+            if ((textBox1.Text == "") || (textBox2.Text == "") || ((textBox1.Text == "") && (textBox2.Text == "")))
+            {
+                MessageBox.Show("All fields not selected", "Please Select all fields", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                conn = new SqlConnection(constr);
+                conn.Open();
+                String query = "insert into Workers (Worker_Name,Worker_Surname,Worker_StartDate,Worker_Email) VALUES (@Name,@van,@date,@email)";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@Name", textBox1.Text);
+                cmd.Parameters.AddWithValue("@van", textBox2.Text);
+                cmd.Parameters.AddWithValue("@date", dateTimePicker1.Value);
+                cmd.Parameters.AddWithValue("@email", textBox3.Text);
+                cmd.ExecuteNonQuery();
+                conn.Close();
+            }
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -123,8 +129,7 @@ namespace Natuurpark1._2
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string pattern = @"";
-            if (Regex.IsMatch(textBox1.Text, pattern))
+            if (textBox1.Text == "")
             {
                 errorProvider2.SetError(this.textBox2, "Please provide a valid name");
             }
@@ -134,7 +139,7 @@ namespace Natuurpark1._2
 
             }
 
-            if (Regex.IsMatch(textBox1.Text, pattern))
+            if (textBox2.Text == "")
             {
                 errorProvider3.SetError(this.textBox2, "Please provide a valid surname");
             }
@@ -143,29 +148,36 @@ namespace Natuurpark1._2
                 errorProvider3.Clear();
 
             }
-            conn = new SqlConnection(constr);
-            conn.Open();
-            string qu = "";
-            //Price is n float onthou om die try orasl in te sit na als 100 wqerk
+            if ((textBox1.Text == "") || (textBox2.Text == "") || ((textBox1.Text == "") && (textBox2.Text == "")))
+            {
+                MessageBox.Show("All fields not selected", "Please Select all fields", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                conn = new SqlConnection(constr);
+                conn.Open();
+                string qu = "";
+                //Price is n float onthou om die try orasl in te sit na als 100 wqerk
 
-            qu = " UPDATE Workers SET Worker_Name = '" + textBox1.Text + "' WHERE Worker_ID = '" + lbID.Text + "'";
-            SqlCommand cmd = new SqlCommand(qu, conn);
-            cmd.ExecuteNonQuery();
+                qu = " UPDATE Workers SET Worker_Name = '" + textBox1.Text + "' WHERE Worker_ID = '" + lbID.Text + "'";
+                SqlCommand cmd = new SqlCommand(qu, conn);
+                cmd.ExecuteNonQuery();
 
 
-            qu = " UPDATE Workers SET Worker_Surname = '" + textBox2.Text + "' WHERE Worker_ID = '" + lbID.Text + "'";
-            SqlCommand cmd1 = new SqlCommand(qu, conn);
-            cmd.ExecuteNonQuery();
+                qu = " UPDATE Workers SET Worker_Surname = '" + textBox2.Text + "' WHERE Worker_ID = '" + lbID.Text + "'";
+                SqlCommand cmd1 = new SqlCommand(qu, conn);
+                cmd.ExecuteNonQuery();
 
-            qu = " UPDATE Workers SET Worker_StartDate = '" + dateTimePicker1.Value + "' WHERE Worker_ID = '" + lbID.Text + "'";
-            SqlCommand cmd2 = new SqlCommand(qu, conn);
-            cmd.ExecuteNonQuery();
+                qu = " UPDATE Workers SET Worker_StartDate = '" + dateTimePicker1.Value + "' WHERE Worker_ID = '" + lbID.Text + "'";
+                SqlCommand cmd2 = new SqlCommand(qu, conn);
+                cmd.ExecuteNonQuery();
 
-            qu = " UPDATE Workers SET Worker_Email = '" + textBox3.Text + "' WHERE Worker_ID = '" + lbID.Text + "'";
-            SqlCommand cmd3 = new SqlCommand(qu, conn);
-            cmd.ExecuteNonQuery();
+                qu = " UPDATE Workers SET Worker_Email = '" + textBox3.Text + "' WHERE Worker_ID = '" + lbID.Text + "'";
+                SqlCommand cmd3 = new SqlCommand(qu, conn);
+                cmd.ExecuteNonQuery();
 
-            conn.Close();
+                conn.Close();
+            }
         }
 
         private void dataGridView1_MouseDoubleClick(object sender, MouseEventArgs e)
@@ -206,6 +218,11 @@ namespace Natuurpark1._2
             {
                 errorProvider1.SetError(this.textBox3, "Please provide a valid email adres");
             }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

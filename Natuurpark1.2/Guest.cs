@@ -55,16 +55,42 @@ namespace Natuurpark1._2
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //add new guest
-            conn = new SqlConnection(constr);
-            conn.Open();
-            String query = "insert into Guests (Guest_Name,Guest_Surname,Guest_Email) VALUES (@Name,@LastName,@Email)";
-            SqlCommand cmd = new SqlCommand(query, conn);
-            cmd.Parameters.AddWithValue("@Name", NameTXT.Text);
-            cmd.Parameters.AddWithValue("@LastName", VanTXT.Text);
-            cmd.Parameters.AddWithValue("@Email", Emailtxt.Text);
-            cmd.ExecuteNonQuery();
-            conn.Close();
+            if (NameTXT.Text == "")
+            {
+                errorProvider2.SetError(this.NameTXT, "Please provide a valid name");
+            }
+            else
+            {
+                errorProvider2.Clear();
+
+            }
+            
+            if (VanTXT.Text == "")
+            {
+                errorProvider3.SetError(this.VanTXT, "Please provide a valid surname");
+            }
+            else
+            {
+                errorProvider3.Clear();
+
+            }
+            if ((NameTXT.Text == "") || (VanTXT.Text == "") || ((NameTXT.Text == "") && (VanTXT.Text == "")))
+            {
+                MessageBox.Show("All fields not selected", "Please Select all fields", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                //add new guest
+                conn = new SqlConnection(constr);
+                conn.Open();
+                String query = "insert into Guests (Guest_Name,Guest_Surname,Guest_Email) VALUES (@Name,@LastName,@Email)";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@Name", NameTXT.Text);
+                cmd.Parameters.AddWithValue("@LastName", VanTXT.Text);
+                cmd.Parameters.AddWithValue("@Email", Emailtxt.Text);
+                cmd.ExecuteNonQuery();
+                conn.Close();
+            }
 
             //net ref
         }
@@ -109,23 +135,51 @@ namespace Natuurpark1._2
 
         private void button2_Click(object sender, EventArgs e)
         {
-            conn = new SqlConnection(constr);
-            conn.Open();
-            string qu = "";
-            qu = " UPDATE Guests SET Guest_Name = '" + NameTXT.Text + "' WHERE Guest_ID = '" + lbID.Text + "'";
-            SqlCommand cmd = new SqlCommand(qu, conn);
-            cmd.ExecuteNonQuery();
+
+            if (NameTXT.Text == "")
+            {
+                errorProvider2.SetError(this.NameTXT, "Please provide a valid name");
+            }
+            else
+            {
+                errorProvider2.Clear();
+
+            }
+
+            if (VanTXT.Text == "")
+            {
+                errorProvider3.SetError(this.VanTXT, "Please provide a valid surname");
+            }
+            else
+            {
+                errorProvider3.Clear();
+
+            }
+            if ((NameTXT.Text == "") || (VanTXT.Text == "") || ((NameTXT.Text == "") && (VanTXT.Text == "")))
+            {
+                MessageBox.Show("All fields not selected", "Please Select all fields", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                conn = new SqlConnection(constr);
+                conn.Open();
+                string qu = "";
+                qu = " UPDATE Guests SET Guest_Name = '" + NameTXT.Text + "' WHERE Guest_ID = '" + lbID.Text + "'";
+                SqlCommand cmd = new SqlCommand(qu, conn);
+                cmd.ExecuteNonQuery();
 
 
-            qu = " UPDATE Guests SET Guest_Surname = '" + VanTXT.Text + "' WHERE Guest_ID = '" + lbID.Text + "'";
-            SqlCommand cmd1 = new SqlCommand(qu, conn);
-            cmd.ExecuteNonQuery();
+                qu = " UPDATE Guests SET Guest_Surname = '" + VanTXT.Text + "' WHERE Guest_ID = '" + lbID.Text + "'";
+                SqlCommand cmd1 = new SqlCommand(qu, conn);
+                cmd.ExecuteNonQuery();
 
-            qu = " UPDATE Guests SET Guest_Email = '" + Emailtxt.Text + "' WHERE Guest_ID = '" + lbID.Text + "'";
-            SqlCommand cmd2 = new SqlCommand(qu, conn);
-            cmd.ExecuteNonQuery();
+                qu = " UPDATE Guests SET Guest_Email = '" + Emailtxt.Text + "' WHERE Guest_ID = '" + lbID.Text + "'";
+                SqlCommand cmd2 = new SqlCommand(qu, conn);
+                cmd.ExecuteNonQuery();
 
-            conn.Close();
+                conn.Close();
+            }
+             
         }
 
         private void NameTXT_TextChanged(object sender, EventArgs e)
