@@ -199,5 +199,82 @@ namespace Natuurpark1._2
             dataGridView1.DataMember = "Lys";
             conn.Close();
         }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton2_CheckedChanged_1(object sender, EventArgs e)
+        {
+            conn = new SqlConnection(constr);
+            conn.Open();
+            SqlCommand com;
+            adap = new SqlDataAdapter();
+            data = new DataSet();
+            string sql = "";
+            if (radioButton2.Checked == true)
+            {
+                sql = "Select * from Animal_Type order by AType_Name ASC";
+            }
+
+            // string sql = "Select * from Animal_Type where AType_Endangered ='" + radioButton1.Text + "'";
+            //  string sql = "Select * from Animal_Type order by AType_Endangered ";
+            com = new SqlCommand(sql, conn);
+            adap.SelectCommand = com;
+            adap.Fill(data, "Lys");
+            dataGridView1.DataSource = data;
+            dataGridView1.DataMember = "Lys";
+            conn.Close();
+            radioButton3.Checked = false;
+        }
+
+        private void radioButton3_CheckedChanged(object sender, EventArgs e)
+        {
+            conn = new SqlConnection(constr);
+            conn.Open();
+            SqlCommand com;
+            adap = new SqlDataAdapter();
+            data = new DataSet();
+            string sql = "";
+            if (radioButton3.Checked == true)
+            {
+                sql = "Select * from Animal_Type order by AType_Name DESC";
+            }
+
+            // string sql = "Select * from Animal_Type where AType_Endangered ='" + radioButton1.Text + "'";
+            //  string sql = "Select * from Animal_Type order by AType_Endangered ";
+            com = new SqlCommand(sql, conn);
+            adap.SelectCommand = com;
+            adap.Fill(data, "Lys");
+            dataGridView1.DataSource = data;
+            dataGridView1.DataMember = "Lys";
+            conn.Close();
+            radioButton2.Checked = false;
+
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            conn = new SqlConnection(constr);
+            conn.Open();
+            SqlCommand com;
+            adap = new SqlDataAdapter();
+            data = new DataSet();
+            string sql = "";
+            if (radioButton1.Checked == false)
+                sql = "Select * from Animal_Type order by AType_Endangered ASC";
+            else
+                sql = "Select * from Animal_Type order by AType_Endangered DESC";
+
+            // string sql = "Select * from Animal_Type where AType_Endangered ='" + radioButton1.Text + "'";
+            //  string sql = "Select * from Animal_Type order by AType_Endangered ";
+            com = new SqlCommand(sql, conn);
+            adap.SelectCommand = com;
+            adap.Fill(data, "Lys");
+            dataGridView1.DataSource = data;
+            dataGridView1.DataMember = "Lys";
+            conn.Close();
+        }
     }
 }

@@ -70,7 +70,9 @@ namespace Natuurpark1._2
                 BtnWorkers.Show();
             }
             else
-            { BtnWorkers.Hide(); }
+            { 
+                BtnWorkers.Hide(); 
+            }
         }
 
         private void lblName_Click(object sender, EventArgs e)

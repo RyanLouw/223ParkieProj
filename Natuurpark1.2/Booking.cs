@@ -258,7 +258,7 @@ namespace Natuurpark1._2
             int AmountOfBookings = 0;
             int AmountOfBeds = 0;
             int AmountOfHous = 0;
-            DataTable dt;
+            
 
             conn = new SqlConnection(constr);
             conn.Open();

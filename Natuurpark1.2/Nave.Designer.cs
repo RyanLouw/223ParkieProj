@@ -29,12 +29,14 @@ namespace Natuurpark1._2
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.BtnHouses = new System.Windows.Forms.Button();
             this.BtnAn = new System.Windows.Forms.Button();
             this.BtnWorkers = new System.Windows.Forms.Button();
             this.BtnGueste = new System.Windows.Forms.Button();
             this.btnBooking = new System.Windows.Forms.Button();
             this.lblName = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // BtnHouses
@@ -45,6 +47,7 @@ namespace Natuurpark1._2
             this.BtnHouses.Size = new System.Drawing.Size(183, 77);
             this.BtnHouses.TabIndex = 9;
             this.BtnHouses.Text = "Houses";
+            this.toolTip1.SetToolTip(this.BtnHouses, "Click here to view Houses");
             this.BtnHouses.UseVisualStyleBackColor = true;
             this.BtnHouses.Click += new System.EventHandler(this.BtnHouses_Click);
             // 
@@ -56,6 +59,7 @@ namespace Natuurpark1._2
             this.BtnAn.Size = new System.Drawing.Size(178, 77);
             this.BtnAn.TabIndex = 8;
             this.BtnAn.Text = "Animals";
+            this.toolTip1.SetToolTip(this.BtnAn, "Click here to view Animals");
             this.BtnAn.UseVisualStyleBackColor = true;
             this.BtnAn.Click += new System.EventHandler(this.BtnAn_Click);
             // 
@@ -67,6 +71,7 @@ namespace Natuurpark1._2
             this.BtnWorkers.Size = new System.Drawing.Size(178, 77);
             this.BtnWorkers.TabIndex = 7;
             this.BtnWorkers.Text = "Workers";
+            this.toolTip1.SetToolTip(this.BtnWorkers, "Click here to view all workers");
             this.BtnWorkers.UseVisualStyleBackColor = true;
             this.BtnWorkers.Click += new System.EventHandler(this.BtnWorkers_Click);
             // 
@@ -78,6 +83,7 @@ namespace Natuurpark1._2
             this.BtnGueste.Size = new System.Drawing.Size(178, 77);
             this.BtnGueste.TabIndex = 6;
             this.BtnGueste.Text = "Guest";
+            this.toolTip1.SetToolTip(this.BtnGueste, "Add guests here");
             this.BtnGueste.UseVisualStyleBackColor = true;
             this.BtnGueste.Click += new System.EventHandler(this.BtnGueste_Click);
             // 
@@ -89,6 +95,7 @@ namespace Natuurpark1._2
             this.btnBooking.Size = new System.Drawing.Size(183, 77);
             this.btnBooking.TabIndex = 5;
             this.btnBooking.Text = "Booking";
+            this.toolTip1.SetToolTip(this.btnBooking, "Click here to make a booking\r\n");
             this.btnBooking.UseVisualStyleBackColor = true;
             this.btnBooking.Click += new System.EventHandler(this.btnBooking_Click);
             // 
@@ -131,5 +138,6 @@ namespace Natuurpark1._2
         private System.Windows.Forms.Button BtnGueste;
         private System.Windows.Forms.Button btnBooking;
         private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

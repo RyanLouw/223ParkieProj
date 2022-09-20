@@ -28,7 +28,7 @@ namespace Natuurpark1._2
         {
 
             //this.Close();
-
+            
             if (UsernameTB.Text == "admin" && wagwoordTB.Text == "admin")
             {
                 isAdmin.isAdm = true;
@@ -38,8 +38,7 @@ namespace Natuurpark1._2
                 form2 = null;
                 Show();
             }
-
-            else
+            else if (UsernameTB.Text == "worker" && wagwoordTB.Text == "worker")
             {
                 isAdmin.isAdm = false;
                 Hide();
@@ -47,6 +46,10 @@ namespace Natuurpark1._2
                 form2.ShowDialog();
                 form2 = null;
                 Show();
+            }
+            else
+            {
+                MessageBox.Show("Wrong Password", "Please enter valid password", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

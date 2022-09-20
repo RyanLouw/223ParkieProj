@@ -29,6 +29,7 @@ namespace Natuurpark1._2
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.dell = new System.Windows.Forms.Button();
             this.edit = new System.Windows.Forms.Button();
             this.Add = new System.Windows.Forms.Button();
@@ -48,6 +49,7 @@ namespace Natuurpark1._2
             this.lbID = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.GuestBTN = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
@@ -131,6 +133,7 @@ namespace Natuurpark1._2
             this.checkBox2.Size = new System.Drawing.Size(66, 17);
             this.checkBox2.TabIndex = 23;
             this.checkBox2.Text = "Arrived";
+            this.toolTip1.SetToolTip(this.checkBox2, "Select if the guests has arrived");
             this.checkBox2.UseVisualStyleBackColor = true;
             this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
             // 
@@ -144,6 +147,7 @@ namespace Natuurpark1._2
             this.checkBox1.Size = new System.Drawing.Size(55, 17);
             this.checkBox1.TabIndex = 22;
             this.checkBox1.Text = "Paid ";
+            this.toolTip1.SetToolTip(this.checkBox1, "Select if the guest paid");
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
@@ -153,6 +157,7 @@ namespace Natuurpark1._2
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 20;
+            this.toolTip1.SetToolTip(this.dateTimePicker1, "Choose a date you want to book on");
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // label1
@@ -177,6 +182,7 @@ namespace Natuurpark1._2
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
             this.numericUpDown1.TabIndex = 35;
+            this.toolTip1.SetToolTip(this.numericUpDown1, "Choose the number of beds you want to book");
             this.numericUpDown1.Value = new decimal(new int[] {
             1,
             0,
@@ -195,6 +201,7 @@ namespace Natuurpark1._2
             this.numericUpDown2.Name = "numericUpDown2";
             this.numericUpDown2.Size = new System.Drawing.Size(120, 20);
             this.numericUpDown2.TabIndex = 36;
+            this.toolTip1.SetToolTip(this.numericUpDown2, "Choose your worker number");
             this.numericUpDown2.Value = new decimal(new int[] {
             1,
             0,
@@ -217,6 +224,7 @@ namespace Natuurpark1._2
             this.numericUpDown3.Name = "numericUpDown3";
             this.numericUpDown3.Size = new System.Drawing.Size(120, 20);
             this.numericUpDown3.TabIndex = 38;
+            this.toolTip1.SetToolTip(this.numericUpDown3, "Select the house you want to book");
             this.numericUpDown3.Value = new decimal(new int[] {
             1002,
             0,
@@ -352,5 +360,6 @@ namespace Natuurpark1._2
         private System.Windows.Forms.Label lbID;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button GuestBTN;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

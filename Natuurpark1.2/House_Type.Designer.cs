@@ -47,7 +47,7 @@ namespace Natuurpark1._2
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(38, 333);
+            this.button3.Location = new System.Drawing.Point(217, 294);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 32;
@@ -58,7 +58,7 @@ namespace Natuurpark1._2
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(119, 294);
+            this.button2.Location = new System.Drawing.Point(115, 294);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 31;
@@ -69,7 +69,7 @@ namespace Natuurpark1._2
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(38, 294);
+            this.button1.Location = new System.Drawing.Point(12, 294);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 30;
@@ -88,9 +88,9 @@ namespace Natuurpark1._2
             // 
             // TypeNAmeTxt
             // 
-            this.TypeNAmeTxt.Location = new System.Drawing.Point(38, 145);
+            this.TypeNAmeTxt.Location = new System.Drawing.Point(97, 145);
             this.TypeNAmeTxt.Name = "TypeNAmeTxt";
-            this.TypeNAmeTxt.Size = new System.Drawing.Size(100, 20);
+            this.TypeNAmeTxt.Size = new System.Drawing.Size(120, 20);
             this.TypeNAmeTxt.TabIndex = 27;
             this.TypeNAmeTxt.TextChanged += new System.EventHandler(this.TypeNAmeTxt_TextChanged);
             // 
@@ -99,7 +99,7 @@ namespace Natuurpark1._2
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(38, 129);
+            this.label3.Location = new System.Drawing.Point(94, 129);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(73, 13);
             this.label3.TabIndex = 26;
@@ -111,7 +111,7 @@ namespace Natuurpark1._2
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(38, 181);
+            this.label1.Location = new System.Drawing.Point(94, 181);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(71, 13);
             this.label1.TabIndex = 33;
@@ -122,7 +122,7 @@ namespace Natuurpark1._2
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(40, 234);
+            this.label2.Location = new System.Drawing.Point(94, 234);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(65, 13);
             this.label2.TabIndex = 34;
@@ -140,15 +140,15 @@ namespace Natuurpark1._2
             // 
             // typepricetxt
             // 
-            this.typepricetxt.Location = new System.Drawing.Point(38, 197);
+            this.typepricetxt.Location = new System.Drawing.Point(97, 197);
             this.typepricetxt.Name = "typepricetxt";
-            this.typepricetxt.Size = new System.Drawing.Size(100, 20);
+            this.typepricetxt.Size = new System.Drawing.Size(120, 20);
             this.typepricetxt.TabIndex = 38;
             this.typepricetxt.TextChanged += new System.EventHandler(this.typepricetxt_TextChanged);
             // 
             // typezizeupdown
             // 
-            this.typezizeupdown.Location = new System.Drawing.Point(38, 250);
+            this.typezizeupdown.Location = new System.Drawing.Point(97, 250);
             this.typezizeupdown.Name = "typezizeupdown";
             this.typezizeupdown.Size = new System.Drawing.Size(120, 20);
             this.typezizeupdown.TabIndex = 35;
